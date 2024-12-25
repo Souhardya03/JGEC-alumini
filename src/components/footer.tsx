@@ -16,7 +16,7 @@ const Footer:React.FC = () => {
 			<div className="bg-[#161f37] lg:p-4 p-5 pb-14 lg:pb-10 gap-4 lg:mt-0 mt-4 lg:px-14 text-white flex lg:flex-row flex-col justify-between ">
 				<div className="flex flex-col lg:w-1/4 gap-2">
 					<Image
-						src="/logo.webp"
+						src="/Logo.webp"
 						width={180}
                         height={180}
 						alt=""
