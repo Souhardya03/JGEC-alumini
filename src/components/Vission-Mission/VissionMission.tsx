@@ -1,17 +1,16 @@
 "use client";
 import Image from "next/image";
-import { React } from "react";
+// import { React } from "react";
 // import "./vissiom_style.css";
 import { GoPeople } from "react-icons/go";
 import { IoMedalOutline } from "react-icons/io5";
 
-const VissionMission = () => {
+const VissionMission: React.FC = () => {
 	return (
 		<>
 			<div className="lg:mt-[8em]  mt-[6em] h-[60vh] overflow-hidden  ">
 				<div className="h-full  rotate-0 w-full">
 					<Image
-						loading="lazy"
 						layout="fill"
 						objectFit="cover"
 						src="/assets/IMG_20240429_013756.jpg"
@@ -156,10 +155,12 @@ const VissionMission = () => {
 						</div>
 					</div>
 					<div className="flex items-center justify-center gap-2">
-						<img
+						<Image
+							height={50}
+							width={50}
 							loading="lazy"
-							src="assets/scholarship_icon.png"
-							className="w-10 h-8 lg:w-12 lg:h-12"
+							src="/assets/scholarship_icon.png"
+							className="w-8 h-8 lg:w-12 lg:h-12"
 							alt=""
 						/>
 						<div className="flex lg:text-[16px] text-[10px] flex-col  ">
@@ -178,6 +179,7 @@ const VissionMission = () => {
 					<div className="w-full  flex flex-wrap justify-center gap-4  p-10">
 						<div className=" relative group  duration-200 lg:h-[50vh] h-[40vh] mb-10 lg:w-[40vh]">
 							<img
+								
 								loading="lazy"
 								src="https://codeboxr.net/themedemo/unialumni/html/assets/images/committee/commitee-1.jpg"
 								alt=""
@@ -201,6 +203,7 @@ const VissionMission = () => {
 							<div className="h-full w-full flex justify-center absolute -top-[3em]">
 								<div className="w-[20vh] group-hover:border-4 duration-200  group-hover:border-blue-400 h-[20vh] rounded-full">
 									<img
+										
 										loading="lazy"
 										src="https://codeboxr.net/themedemo/unialumni/html/assets/images/testimonial/testi-3.png"
 										className="h-full w-full object-cover rounded-full"
@@ -218,9 +221,6 @@ const VissionMission = () => {
 								<div className="bg-blue-400 h-full w-[80%]"></div>
 							</div>
 						</div>
-						
-						
-						
 					</div>
 				</div>
 			</div>
