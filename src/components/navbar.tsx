@@ -134,7 +134,7 @@ const Navbar = () => {
 								{moreLinks.map((links, index) => (
 									<Link
 										key={links.name}
-										href="/research&internship"
+										href={links.link}
 										className={`border-b hover:text-blue-600 border-b-[#ebeaea] ${
 											pathname == links.link
 												? "bg-[#dae5f2] border-b-4 border-b-[#3a60c8] text-blue-500"
