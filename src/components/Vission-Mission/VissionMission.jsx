@@ -22,7 +22,7 @@ const VissionMission = () => {
 						<div className="text-5xl text-blue-400 font-medium">
 							About <span className="text-white">Us</span>
 						</div>
-						<div className="text-xs w-1/2 text-center">
+						<div className="text-xs  text-center">
 							Alumni Needs enables you to harness the power of your alumni
 							network. Whatever may be the need
 						</div>
@@ -31,7 +31,7 @@ const VissionMission = () => {
 			</div>
 			{/* About Details */}
 			<div className=" py-14 flex justify-center flex-col items-center  bg-[#edf1f4]">
-				<div className=" relative  shadow-xl bg-white lg:w-2/3 w-[90%] lg:h-[60vh] my-10 ">
+				<div className=" relative  shadow-xl bg-white lg:w-2/3 w-[90%] xl:h-full lg:h-full md:h-full my-10 2xl:h-full ">
 					<div className="absolute rotate-0 right-0 -top-[0.8em] li text-6xl text-white">
 						2010
 					</div>
@@ -43,11 +43,11 @@ const VissionMission = () => {
 							className="h-full w-full object-cover"
 						/>
 					</div>
-					<div className="text-xl p-4  lg:flex  flex-col items-end gap-2  h-1/2 ">
-						<div className="  text-left mb-3 lg:w-[55%] font-medium text-3xl">
+					<div className="text-xl p-4  lg:flex  flex-col items-end xl:gap-2  h-1/2 ">
+						<div className=" xl:text-3xl text-left mb-3 lg:w-[55%] font-medium lg:text-xl 2xl:text-3xl">
 							ESTD of This Alumni Assotitation
 						</div>
-						<div className="lg:text-[16px] text-[10px] lg:w-[55%]">
+						<div className="lg:text-[13px] 2xl:text-[16px] text-[10px] lg:w-[55%]">
 							The Alumni association got registration on 22 nd day of April 2010
 							from Registrar of Socities West Bengal Act XXVI of 1961 vide
 							No:-S/L/70053 of 2010-11 after obtaining permission from Principal
@@ -55,7 +55,7 @@ const VissionMission = () => {
 							Building in his letter to Mr.D. Sarkar, thee then President of the
 							Alumni Association, dated 07/04/2010.
 						</div>
-						<div className="text-[10px] mt-4 lg:text-[16px]">
+						<div className="text-[10px] 2xl:mt-6 lg:text-[13px] xl:text-[14px]  2xl:text-[16px]">
 							To achieve vision &amp; mission, the Alumni Association shall have
 							a broad based Executive committee comprising of representing any
 							chapter, centre, area, group of member by way of invitation and or
@@ -67,7 +67,7 @@ const VissionMission = () => {
 						</div>
 					</div>
 				</div>
-				<div className=" relative  shadow-xl bg-white lg:w-2/3 w-[90%] px-4 my-10 ">
+				<div className=" relative  shadow-xl bg-white lg:w-2/3 w-[90%]  my-10 ">
 					<div className="absolute rotate-0 left-0 -top-[0.8em]  text-6xl text-white ">
 						2010
 					</div>
@@ -79,11 +79,11 @@ const VissionMission = () => {
 							className="h-full w-full object-cover"
 						/>
 					</div>
-					<div className="text-xl p-4  flex  flex-col  gap-2  h-1/2 ">
+					<div className="text-xl   flex p-4 flex-col  gap-2  h-1/2 ">
 						<div className="  text-left lg:w-[55%] font-medium text-3xl">
 							Our Vission & Mission
 						</div>
-						<div className=" text-[10px] lg:text-[16px] lg:w-[55%]">
+						<div className=" text-[10px] px-5 lg:text-[14px] xl:text-[16px] lg:w-[55%]">
 							<ul className=" list-disc">
 								<li>
 									To develop and maintain functional co-ordination between the
@@ -108,7 +108,7 @@ const VissionMission = () => {
 								</li>
 							</ul>
 						</div>
-						<div className="text-[10px] lg:text-[16px]">
+						<div className="text-[10px] px-5 lg:text-[14px] xl:text-[16px]">
 							<ul className="list-disc">
 								<li>
 									To co-ordinate training and placement programmes of the
@@ -197,7 +197,7 @@ const VissionMission = () => {
 						<div className="border border-blue-400 w-1/2"></div>
 					</div>
 					<div className="flex lg:px-14 justify-center gap-8 mt-14 flex-wrap">
-						<div className=" h-[50vh] group lg:mb-10 mb-16 hover:scale-105 duration-200 bg-white relative w-[40vh] lg:w-[50vh]">
+						<div className=" h-[40vh] group lg:mb-10 mb-16 hover:scale-105 duration-200 bg-white relative w-[40vh] lg:w-[50vh]">
 							<div className="h-full w-full flex justify-center absolute -top-[3em]">
 								<div className="w-[20vh] group-hover:border-4 duration-200  group-hover:border-blue-400 h-[20vh] rounded-full">
 									<img
@@ -208,7 +208,7 @@ const VissionMission = () => {
 									/>
 								</div>
 							</div>
-							<div className="flex text-[14px] lg:text-[16px] h-[80%] px-4 justify-end items-end">
+							<div className="flex text-[12px] md:text-[12px] sm:text-[12px] lg:text-[14px] xl:text-[14px] 2xl:text-[16px] h-[80%] px-4 justify-end items-end">
 								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
 								rerum nihil totam nobis qui molestiae modi quae neque ut non
 								animi accusantium harum dolores officia enim quidem dicta,
@@ -218,48 +218,9 @@ const VissionMission = () => {
 								<div className="bg-blue-400 h-full w-[80%]"></div>
 							</div>
 						</div>
-						<div className=" h-[50vh] group lg:mb-10 mb-16 hover:scale-105 duration-200 bg-white relative w-[40vh] lg:w-[50vh]">
-							<div className="h-full w-full flex justify-center absolute -top-[3em]">
-								<div className="w-[20vh] group-hover:border-4 duration-200  group-hover:border-blue-400 h-[20vh] rounded-full">
-									<img
-										loading="lazy"
-										src="https://codeboxr.net/themedemo/unialumni/html/assets/images/testimonial/testi-3.png"
-										className="h-full w-full object-cover rounded-full"
-										alt=""
-									/>
-								</div>
-							</div>
-							<div className="flex text-[14px] lg:text-[16px] h-[80%] px-4 justify-end items-end">
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
-								rerum nihil totam nobis qui molestiae modi quae neque ut non
-								animi accusantium harum dolores officia enim quidem dicta,
-								laboriosam ipsa?
-							</div>
-							<div className="h-[10vh] flex justify-end w-full -bottom-[2em] absolute rotate-0">
-								<div className="bg-blue-400 h-full w-[80%]"></div>
-							</div>
-						</div>
-						<div className=" h-[50vh] group lg:mb-10 mb-16 hover:scale-105 duration-200 bg-white relative w-[40vh] lg:w-[50vh]">
-							<div className="h-full w-full  flex justify-center absolute -top-[3em]">
-								<div className="w-[20vh] group-hover:border-4 duration-200  group-hover:border-blue-400  h-[20vh] rounded-full">
-									<img
-										loading="lazy"
-										src="https://codeboxr.net/themedemo/unialumni/html/assets/images/testimonial/testi-3.png"
-										className="h-full w-full object-cover rounded-full"
-										alt=""
-									/>
-								</div>
-							</div>
-							<div className="flex h-[80%] text-[14px] lg:text-[16px] px-4 justify-end items-end">
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni
-								rerum nihil totam nobis qui molestiae modi quae neque ut non
-								animi accusantium harum dolores officia enim quidem dicta,
-								laboriosam ipsa?
-							</div>
-							<div className="h-[10vh] flex justify-end w-full -bottom-[2em] absolute rotate-0">
-								<div className="bg-blue-400 h-full w-[80%]"></div>
-							</div>
-						</div>
+						
+						
+						
 					</div>
 				</div>
 			</div>

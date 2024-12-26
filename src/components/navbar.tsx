@@ -72,7 +72,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className=" h-[6.2em] w-full z-[999] lg:top-10 top-0 bg-white fixed shadow-lg flex items-center justify-between lg:px-[5rem]">
+			<nav className=" h-[6.2em] w-full z-[999] lg:top-9  top-0 bg-white fixed shadow-lg flex items-center justify-between xl:px-[5rem] lg:px-[2rem]">
 				<div className="flex items-center justify-between w-[90%] lg:w-full ">
 					<div className="">
 						<Image
@@ -97,7 +97,7 @@ const Navbar = () => {
 					<RxHamburgerMenu />
 				</div>
 
-				<div className="lg:flex hidden h-full text-[0.88rem] items-center duration-200  justify-between font-medium w-full">
+				<div className="lg:flex hidden h-full  lg:text-[0.6em] 2xl:text-[0.88rem] xl:text-[0.7rem] items-center duration-200  justify-between font-medium w-full">
 					{Links.map((link, index) => (
 						<Link
 							key={link.name}

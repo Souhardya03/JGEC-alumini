@@ -17,8 +17,8 @@ const Footer:React.FC = () => {
 				<div className="flex flex-col lg:w-1/4 gap-2">
 					<Image
 						src="/Logo.webp"
-						width={180}
-                        height={180}
+						width={150}
+                        height={150}
 						alt=""
 					/>
 					<div className="text-sm lg:pl-2">
@@ -35,7 +35,7 @@ const Footer:React.FC = () => {
 				</div>
 				<div className=" flex flex-col gap-2 py-3  lg:p-4">
 					<h1 className="text-2xl font-medium text-white">Get In Touch</h1>
-					<div className="lg:mt-10 mt-4 text-lg text-gray-400">
+					<div className="lg:mt-10 mt-4 text-sm lg:text-lg text-gray-400">
 						THE JALPAIGURI
 						<div>GOVT.ENGG.COLLEGE ALUMNI</div>
 						<div>ASSOCIATION, JALPAIGURI.</div>
@@ -96,7 +96,7 @@ const Footer:React.FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex gap-2 text-sm lg:text-lg font-medium text-white p-4 items-center justify-center bg-[#3b60c9]">
+			<div className="flex gap-2 text-xs lg:text-lg font-medium text-white p-4 items-center justify-center bg-[#3b60c9]">
 				<FaRegCopyright />
 				JGEC Alumini Association. All Rights Reserved.
 			</div>

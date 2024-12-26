@@ -9,7 +9,7 @@ const Auth: React.FC = () => {
 	return (
 		<>
 			{/* Membership Banner */}
-			<div className="lg:mt-[8em]  mt-[6em] h-[60vh] overflow-hidden  ">
+			<div className="lg:mt-[8em] w-full   mt-[6em] h-[60vh] overflow-hidden  ">
 				<div className="h-full  rotate-0 w-full">
 					<div className="text-white h-full z-20 w-full top-0 flex flex-col items-center justify-center gap-3  absolute ">
 						<div className="lg:text-5xl text-3xl text-blue-400 font-medium">
@@ -25,12 +25,12 @@ const Auth: React.FC = () => {
 						objectFit="cover"
 						src="/assets/IMG_20240429_013756.jpg"
 						alt=""
-						className=" z-10  object-cover brightness-[30%]"
+						className=" brightness-[30%]"
 					/>
 				</div>
 			</div>
 			{/* Authentication Form */}
-			<div className="h-full lg:py-28 py-20 flex lg:flex-row flex-col justify-center gap-8 items-center bg-white">
+			<div className="h-full lg:py-28 py-20 overflow-hidden flex lg:flex-row flex-col justify-center gap-8 items-center bg-white">
 				{/* Login Form */}
 				<div className="">
 					<h2 className="text-3xl text-center mb-8">Already a Member?</h2>
@@ -61,8 +61,8 @@ const Auth: React.FC = () => {
 				{/* Registration Form */}
 				<div className="lg:w-[40%] border-t-2 lg:border-l-2 lg:border-t-0 lg:pt-0 pt-6 lg:pl-6 border-t-blue-500 mx-4 lg:mx-0 lg:border-l-blue-500">
 					<div className="text-3xl font-medium mb-8">REGISTRATION FORM</div>
-					<form>
-						<div className="grid lg:grid-cols-2 grid-col-1 gap-3">
+					<form className="">
+						<div className="grid lg:grid-cols-2 md:grid-cols-2 grid-col-1 gap-3">
 							<div>
 								<label
 									htmlFor="email"
