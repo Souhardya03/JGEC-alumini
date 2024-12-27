@@ -181,15 +181,15 @@ const Navbar = () => {
 						</div>
 					</div>
 					<div className="flex text-white mt-4 gap-6">
-						<button className="bg-[#3a60c8] p-2 px-4 font-medium ">
+						<Link href="/login" className="bg-[#3a60c8] p-2 px-4 font-medium ">
 							LOGIN
-						</button>
-						<button className="bg-[#1fc178] p-2 px-4 font-medium ">
+						</Link>
+						<Link href="/login" className="bg-[#1fc178] p-2 px-4 font-medium ">
 							SIGN UP
-						</button>
-						<button className="bg-[#663298] p-2 px-4 font-medium ">
+						</Link>
+						<Link href="https://jgec.ac.in/" target="_blank" className="bg-[#663298] p-2 px-4 font-medium ">
 							VISIT
-						</button>
+						</Link>
 					</div>
 					<hr className="mt-4 border border-[#e8e8e8] w-full" />
 					<div className="flex text-lg font-medium flex-col justify-center w-full">
@@ -231,18 +231,18 @@ const Navbar = () => {
 										: "h-0 overflow-hidden pointer-events-none"
 								} duration-200`}>
 								<div className="flex flex-col justify-center">
-								{moreLinks.map((links, index) => (
-									<Link
-										key={links.name}
-										href="/research&internship"
-										className={`border-b hover:text-blue-600 border-b-[#ebeaea] ${
-											pathname == links.link
-												? "bg-[#dae5f2] border-l-4 border-l-[#3a60c8] text-blue-500"
-												: ""
-										} text-black border-b-4`}>
-										<div className="p-3">{links.name}</div>
-									</Link>
-								))}
+									{moreLinks.map((links, index) => (
+										<Link
+											key={links.name}
+											href={links.link}
+											className={`border-b hover:text-blue-600 border-b-[#ebeaea] ${
+												pathname == links.link
+													? "bg-[#dae5f2] border-l-4 border-l-[#3a60c8] text-blue-500"
+													: ""
+											} text-black `}>
+											<div className="p-3">{links.name}</div>
+										</Link>
+									))}
 								</div>
 							</div>
 						</div>
