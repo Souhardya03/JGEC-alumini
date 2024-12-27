@@ -46,7 +46,7 @@ const VissionMission: React.FC = () => {
 						<div className=" xl:text-3xl text-left mb-3 lg:w-[55%] font-medium lg:text-xl 2xl:text-3xl">
 							ESTD of This Alumni Assotitation
 						</div>
-						<div className="lg:text-[13px] 2xl:text-[16px] text-[10px] lg:w-[55%]">
+						<div className="lg:text-[13px] 2xl:text-[16px] text-[14px] lg:w-[55%]">
 							The Alumni association got registration on 22 nd day of April 2010
 							from Registrar of Socities West Bengal Act XXVI of 1961 vide
 							No:-S/L/70053 of 2010-11 after obtaining permission from Principal
@@ -54,7 +54,7 @@ const VissionMission: React.FC = () => {
 							Building in his letter to Mr.D. Sarkar, thee then President of the
 							Alumni Association, dated 07/04/2010.
 						</div>
-						<div className="text-[10px] 2xl:mt-6 lg:text-[13px] xl:text-[14px]  2xl:text-[16px]">
+						<div className="text-[14px] 2xl:mt-6 lg:text-[13px] xl:text-[14px]  2xl:text-[16px]">
 							To achieve vision &amp; mission, the Alumni Association shall have
 							a broad based Executive committee comprising of representing any
 							chapter, centre, area, group of member by way of invitation and or
@@ -79,10 +79,10 @@ const VissionMission: React.FC = () => {
 						/>
 					</div>
 					<div className="text-xl   flex p-4 flex-col  gap-2  h-1/2 ">
-						<div className="  text-left lg:w-[55%] font-medium text-3xl">
+						<div className="  text-left lg:w-[55%] font-medium xl:text-3xl mb-3  lg:text-xl 2xl:text-3xl">
 							Our Vission & Mission
 						</div>
-						<div className=" text-[10px] px-5 lg:text-[14px] xl:text-[16px] lg:w-[55%]">
+						<div className=" text-[14px] px-5 lg:text-[14px] xl:text-[16px] lg:w-[55%]">
 							<ul className=" list-disc">
 								<li>
 									To develop and maintain functional co-ordination between the
@@ -107,7 +107,7 @@ const VissionMission: React.FC = () => {
 								</li>
 							</ul>
 						</div>
-						<div className="text-[10px] px-5 lg:text-[14px] xl:text-[16px]">
+						<div className="text-[14px] px-5 lg:text-[14px] xl:text-[16px]">
 							<ul className="list-disc">
 								<li>
 									To co-ordinate training and placement programmes of the

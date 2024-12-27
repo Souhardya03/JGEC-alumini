@@ -13,6 +13,7 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
 import GoverningBody from "./GoverningBody";
+import Link from "next/link";
 const Home: React.FC = () => {
 	return (
 		<>
@@ -33,12 +34,12 @@ const Home: React.FC = () => {
 										Association, Jalpaiguri
 									</div>
 									<div className="flex gap-8">
-										<button className="bg-blue-500 hover:scale-110 duration-150 cursor-pointer text-sm lg:text-lg text-white lg:p-3 lg:px-5  p-2 font-medium">
+										<Link href="/vision-mission" className="bg-blue-500 hover:scale-110 duration-150 cursor-pointer text-sm lg:text-lg text-white lg:p-3 lg:px-5  p-2 font-medium">
 											Our Mission
-										</button>
-										<button className="bg-white hover:scale-110 duration-150 cursor-pointer lg:text-lg text-sm shadow-lg text-black p-3 px-4 font-medium">
+										</Link>
+										<Link href="/upcoming-events" className="bg-white hover:scale-110 duration-150 cursor-pointer lg:text-lg text-sm shadow-lg text-black p-3 px-4 font-medium">
 											Upcoming Events
-										</button>
+										</Link>
 									</div>
 								</div>
 								<img
