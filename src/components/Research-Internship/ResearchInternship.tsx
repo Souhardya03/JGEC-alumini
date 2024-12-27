@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 
@@ -65,7 +67,7 @@ const ResearchInternship: React.FC = () => {
 					{Career.map((career, index) => (
 						<div
 							key={career.name}
-							className="flex p-4 gap-4 bg-white   h-[55vh]  flex-col items-center justify-center">
+							className="flex p-4 gap-8 bg-white rounded-[0.4rem] hover:-translate-y-3 duration-200  h-[55vh]  flex-col items-center justify-center">
 							<Image
 								src={career.imageUrl}
 								alt={career.name}
