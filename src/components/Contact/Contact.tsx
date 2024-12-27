@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
 
 	return (
 		<>
-			{/* Membership Banner */}
+			{/* Contact Banner */}
 			<div className="lg:mt-[8em] w-full   mt-[6em] h-[60vh] overflow-hidden  ">
 				<div className="h-full  rotate-0 w-full">
 					<div className="text-white h-full z-20 w-full top-0 flex flex-col items-center justify-center gap-3  absolute ">
