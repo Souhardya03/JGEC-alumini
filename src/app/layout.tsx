@@ -2,17 +2,18 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+	subsets: ["latin"],
+	weight: ['400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
 	// metadataBase: new URL(""),
-	title: "The Jalpaiguri Government Engineering College.",
-	description:
-		"The alumini association of Jalpaiguri Government Engineering College.",
-	keywords:
-		"Jalpaiguri Government Engineering College, JGEC, JGEC alumini assosiation",
+	title: "Jalpaiguri Government Engineering College Alumni Association.",
+	description: "The alumni association of Jalpaiguri Government Engineering College.",
+	keywords: "Jalpaiguri Government Engineering College, JGEC, Alumni Association, JGEC Alumni Association, Jalpaiguri",
 	openGraph: {
-		title: "The Jalpaiguri Government Engineering College.",
+		title: "Jalpaiguri Government Engineering College.",
 		description:
 			"The alumini association of Jalpaiguri Government Engineering College.",
 		// url: 'https://cfi-jgec-new.vercel.app',
@@ -27,7 +28,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				{children}
+			</body>
 		</html>
 	);
 }
