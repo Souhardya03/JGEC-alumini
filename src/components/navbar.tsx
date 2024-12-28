@@ -150,8 +150,8 @@ const Navbar = () => {
 			</nav>
 
 			<Drawer open={openNav} onClose={() => setOpenNav(false)} direction="left" >
-				<DrawerContent>
-					<div className="w-full h-full overflow-y-auto flex flex-col  mt-4 items-center">
+				<DrawerContent className="overflow-hidden">
+					<div className="w-full h-full py-4 overflow-y-auto flex flex-col  items-center">
 						<div className="flex flex-col justify-center items-center">
 							<Image
 								height={120}
@@ -174,7 +174,7 @@ const Navbar = () => {
 								<RxCross2 />
 							</div>
 						</div>
-						<div className="flex text-white my-6 gap-6">
+						<div className="flex text-white mt-4 gap-6">
 							<Link href="/login">
 								<Button>
 									LOGIN
@@ -191,21 +191,23 @@ const Navbar = () => {
 								</Button>
 							</Link>
 						</div>
-						<hr className="mt-4 border border-[#e8e8e8] w-full" />
-						<div className="flex text-lg font-medium flex-col justify-center w-full">
-							{Links.map((link, index) => (
+						<hr className="mt-6 border border-[#e8e8e8] w-full" />
+						<div className="flex text-sm font-medium flex-col justify-center w-full">
+							{[...Links, ...moreLinks].map((link, i,arr) => (
 								<Link
 									key={link.name}
 									href={link.link}
 									onClick={() => setOpenNav(false)}
-									className={` items-center flex px-4 p-3 h-full ${pathname == link.link
+									className={` items-center flex px-6 min-[350px]:px-8 py-3 text-sm h-full ${pathname == link.link
 										? "bg-[#dae5f2] border-l-4  border-l-[#3a60c8] text-blue-500"
 										: "text-black"
-										} border-b`}>
+										}  ${i === (arr.length - 1) ? "border-b-0" : "border-b"}`
+									}
+								>
 									{link.name}
 								</Link>
 							))}
-							<div
+							{/* <div
 								className="cursor-pointer   w-full  items-center  duration-200"
 								onClick={() => setOpen(!open)}>
 								<div
@@ -242,7 +244,7 @@ const Navbar = () => {
 										))}
 									</div>
 								</div>
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</DrawerContent>

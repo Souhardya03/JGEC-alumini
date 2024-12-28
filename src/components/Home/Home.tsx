@@ -1,18 +1,10 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-// import "./Home.css";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
-
-// import required modules
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import GoverningBody from "./GoverningBody";
+import { Pagination, Navigation, Autoplay } from "swiper/modules"; 
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Image from "next/image";
@@ -21,11 +13,11 @@ const Home: React.FC = () => {
 	return (
 		<>
 			<div className="w-full">
-				<div className="text-neutral-950  flex justify-center  relative h-[45vh] xs:h-[50vh] md:h-[60vh] lg:h-[70vh] lg:mt-[8em] mt-[6em] ">
+				<div className="text-neutral-950  flex justify-center  relative h-[30vh] xs:h-[50vh] md:h-[60vh] lg:h-[70vh] lg:mt-[8em] mt-[6em] ">
 					<Swiper
 						direction={"vertical"}
 						pagination={{
-							clickable: true,
+							clickable: false,
 						}}
 						loop={true}
 						autoplay={{
@@ -70,11 +62,11 @@ const Home: React.FC = () => {
 					</Swiper>
 				</div>
 				<div className="w-full h-auto px-4 md:px-10">
-					<div className="w-full h-auto lg:h-80 -mt-16 rounded-md flex max-w-4xl mx-auto  justify-center  items-center p-4 pr-0 max-sm:pt-6 md:p-8 md:pb-4 md:pr-4 z-10  bg-primary relative">
-						<div className="bg-white absolute rounded-full -top-5 right-5 px-4 py-2 text-sm font-semibold">
+					<div className="w-full h-auto lg:h-80 mt-10 mb-6  sm:-mt-16 rounded-md flex max-w-4xl mx-auto  justify-center  items-center p-4 pr-0 max-sm:pt-6 md:p-8 md:pb-4 md:pr-4 z-10  bg-primary relative">
+						<div className="bg-white absolute rounded-full -top-5 right-5 px-4 py-2 text-sm font-semibold shadow-md border border-neutral-200">
 							Scholarship
 						</div>
-						<div className="w-full h-full relative max-sm:pb-10 ">
+						<div className="w-full h-full relative ">
 							<Swiper
 								slidesPerView={1}
 								spaceBetween={30}
@@ -84,7 +76,7 @@ const Home: React.FC = () => {
 								}}
 								// navigation={true}
 								modules={[Navigation]}
-								className="mySwiper  max-sm:!overflow-visible">
+								className="mySwiper">
 								{[0, 1, 2].map(ele => (
 									<SwiperSlide key={ele}>
 										<div className="w-full h-full flex flex-col lg:flex-row gap-6 pb-4 pr-4 ">
@@ -127,7 +119,7 @@ const Home: React.FC = () => {
 const SwiperButtons = () => {
 	const swiper = useSwiper();
 	return (
-		<div className="flex  justify-end items-center gap-2 absolute -bottom-10 sm:bottom-0 right-4 sm:right-0 z-50" >
+		<div className="flex  justify-end items-center gap-2 sm:absolute bottom-0 right-4 sm:right-0 z-50 pe-4" >
 			<button
 				onClick={() => swiper.slidePrev()}
 				className="bg-[#5580ff] hover:bg-blue-600 transition-colors ease-linear duration-300 text-white p-3 text-lg rounded-full">
