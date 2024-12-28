@@ -150,7 +150,7 @@ const Navbar = () => {
 			</nav>
 
 			<Drawer open={openNav} onClose={() => setOpenNav(false)} direction="left" >
-				<DrawerContent className="overflow-hidden">
+				<DrawerContent className="overflow-hidden block lg:hidden">
 					<div className="w-full h-full py-4 overflow-y-auto flex flex-col  items-center">
 						<div className="flex flex-col justify-center items-center">
 							<Image

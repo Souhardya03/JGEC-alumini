@@ -1,15 +1,9 @@
-import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
-import Topbar from "@/components/topbar";
 import React from "react";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<div className="w-full">
-			<Topbar />
-			<Navbar />
-			{children}
-			<Footer />
+		<div className="w-full"> 
+			{children} 
 		</div>
 	);
 };
