@@ -20,6 +20,8 @@ const config: Config = {
 				sm: "calc(var(--radius) - 4px)",
 			},
 			colors: {
+				white: '#f5f5f5',
+				primary: '#516bb7',
 				background: "hsl(var(--background))",
 				foreground: "hsl(var(--foreground))",
 				card: {
@@ -29,10 +31,6 @@ const config: Config = {
 				popover: {
 					DEFAULT: "hsl(var(--popover))",
 					foreground: "hsl(var(--popover-foreground))",
-				},
-				primary: {
-					DEFAULT: "hsl(var(--primary))",
-					foreground: "hsl(var(--primary-foreground))",
 				},
 				secondary: {
 					DEFAULT: "hsl(var(--secondary))",
@@ -65,6 +63,7 @@ const config: Config = {
 				xxs: "375px",
 				xs: "475px",
 				mlg: "950px",
+				max_screen: "1360px",
 			},
 		},
 	},
