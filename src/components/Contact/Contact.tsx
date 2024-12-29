@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
 						loading="lazy"
 						layout="fill"
 						objectFit="cover"
-						src="/assets/IMG_20240429_013756.jpg"
+						src="/assets/membership.jpg"
 						alt=""
 						className=" brightness-[30%]"
 					/>
@@ -77,7 +77,7 @@ const Contact: React.FC = () => {
 						{({ handleChange, values, setFieldValue }) => (
 							<Form>
 								<div className="flex flex-col w-full gap-4">
-									<div className="flex  gap-4 ">
+									<div className="flex md:flex-row flex-col gap-4 ">
 										<div className="flex w-full flex-col gap-1">
 											<InputField
 												type="email"
@@ -173,7 +173,7 @@ const Contact: React.FC = () => {
 								</div>
 
 								<Button
-									className="py-3 mt-4 hover:scale-100 w-1/4 max-w-xs"
+									className="py-3 text-white mt-4 hover:scale-100 w-1/4 max-w-xs"
 									type="submit">
 									Send
 								</Button>

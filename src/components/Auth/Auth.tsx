@@ -50,7 +50,7 @@ const Auth: React.FC = () => {
 										className="text-red-500 text-xs"
 									/>
 								</div>
-								<Button className="py-3 hover:scale-100" type="submit">
+								<Button className="py-3 hover:scale-100 text-white" type="submit">
 									Login
 								</Button>
 							</Form>
@@ -237,7 +237,7 @@ const Auth: React.FC = () => {
 									</ul>
 								</div>
 							</div>
-							<Button className="py-3 hover:scale-100 w-full max-w-xs" type="submit">
+							<Button className="py-3 text-white hover:scale-100 w-full max-w-xs" type="submit">
 								Registration
 							</Button>
 						</Form>
