@@ -67,7 +67,7 @@ const Events: React.FC = () => {
 					<Image
 						layout="fill"
 						objectFit="cover"
-						src="/assets/IMG_20240429_013756.jpg"
+						src="/assets/membership.jpg"
 						alt=""
 						className="object-cover brightness-[30%]"
 					/>

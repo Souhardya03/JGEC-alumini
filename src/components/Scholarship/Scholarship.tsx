@@ -13,10 +13,10 @@ const Scholarship = () => {
 			<div className="lg:mt-[8em] w-full   mt-[6em] h-[60vh] overflow-hidden  ">
 				<div className="h-full  rotate-0 w-full">
 					<div className="text-white h-full z-20 w-full top-0 flex flex-col items-center justify-center gap-3  absolute ">
-						<div className="lg:text-5xl text-3xl text-blue-400 font-medium">
+						<div className="lg:text-5xl text-4xl text-blue-400 font-medium">
 							Scho<span className="text-white">larships</span>
 						</div>
-						<div className="text-sm px-4 lg:w-1/2 text-center">
+						<div className="lg:text-sm text-xs px-4 lg:w-1/2 text-center">
 							We are committed to helping students achieve their academic goals
 							by providing them with the necessary resources and scholarships.
 						</div>
@@ -32,7 +32,7 @@ const Scholarship = () => {
 				</div>
 			</div>
 			{/* Scholarship Details */}
-			<div className="h-screen flex items-center justify-center">
+			<div className="h-screen flex items-center px-3 justify-center">
 				<div className="w-full lg:w-[30%]">
 					<div className=" bg-[#7ec9ee]  h-[70vh]">
 						<div className="bg-[#3fa3d5] text-lg md:text-xl text-neutral-950 p-2.5 font-medium">

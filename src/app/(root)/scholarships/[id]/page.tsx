@@ -7,13 +7,12 @@ import { InputField } from "@/components/ui/input";
 import { SelectField } from "@/components/ui/select";
 import { TextareaField } from "@/components/ui/textarea";
 import { ScholarshipDetails } from "@/lib/ScholarshipsData";
+import { ScholarshipSchema } from "@/schemas/ScholarshipSchema";
 
 import { ErrorMessage, Formik, Form } from "formik";
 
 import Image from "next/image";
 import React from "react";
-
-
 
 interface EventParams {
 	params: { id: string };
@@ -21,9 +20,7 @@ interface EventParams {
 
 const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 	const { id } = params;
-    const data = ScholarshipDetails.filter((e) => e.id === Number(id));
-	console.log(data);
-    
+	const data = ScholarshipDetails.filter((e) => e.id === Number(id));
 
 	return (
 		<div className="grid grid-cols-1 ">
@@ -44,11 +41,8 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 								tools for their enlightenment to outer world outside campus and
 								thus to highlight glory of JGEC to outsiders.
 							</div>
-							<div>
-								{data[0].description}
-							</div>
+							<div>{data[0].description}</div>
 						</div>
-						
 					</div>
 				</div>
 				<div className="rounded-md h-full  bg-[#c4eb80]  lg:w-1/2">
@@ -56,19 +50,21 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 						{data[0].title}
 					</div>
 					<div className="lg:text-sm text-xs space-y-2 p-4">
-						
 						<div>
-							<span className="font-semibold">Who can apply:</span> {data[0].whocanApply}
+							<span className="font-semibold">Who can apply:</span>{" "}
+							{data[0].whocanApply}
 						</div>
 						<div>
-							<span className="font-semibold">Age Criteria:</span> {data[0].AgeCriteria}
+							<span className="font-semibold">Age Criteria:</span>{" "}
+							{data[0].AgeCriteria}
 						</div>
 						<div>
 							<span className="font-semibold">Amount of scholarship :</span>{" "}
 							{data[0].amount}
 						</div>
 						<div>
-							<span className="font-semibold">When to apply :</span> {data[0].whentoApply}
+							<span className="font-semibold">When to apply :</span>{" "}
+							{data[0].whentoApply}
 						</div>
 					</div>
 				</div>
@@ -76,7 +72,9 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 
 			<div className=" p-4  lg:px-14 flex lg:flex-row flex-col-reverse  bg-[#edf1f4]">
 				<div className="h-full bg-white shadow-xl w-full rounded-md p-4">
-					<h2 className="lg:text-xl font-semibold">STUDENT’S APPLICATION FORM</h2>
+					<h2 className="lg:text-xl font-semibold">
+						STUDENT’S APPLICATION FORM
+					</h2>
 					<p className="font-medium mb-4 text-xs lg:text-sm">
 						(Please read relevant information and rules mentioned in the
 						webpage)
@@ -108,6 +106,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 							specialAchievement: "",
 							jobCampusing: "",
 						}}
+						validationSchema={ScholarshipSchema}
 						onSubmit={(values) => {
 							console.log(values);
 						}}>
@@ -232,7 +231,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 											onChange={handleChange}
 										/>
 										<ErrorMessage
-											name="numberofdirectfamilyMembers"
+											name="totalEarningMembers"
 											component="div"
 											className="text-red-500 text-xs"
 										/>
@@ -246,7 +245,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 											onChange={handleChange}
 										/>
 										<ErrorMessage
-											name="numberofdirectfamilyMembers"
+											name="totalFamilyIncome"
 											component="div"
 											className="text-red-500 text-xs"
 										/>
@@ -486,7 +485,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 						<Image
 							src={data[0].provider[0].imageUrl}
 							alt={data[0].provider[0].name}
-                            layout="fill"
+							layout="fill"
 							objectFit="cover"
 							className=" rotate-0 rounded-sm"
 						/>
