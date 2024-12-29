@@ -1,30 +1,34 @@
 "use client";
 
+import { ErrorMessage, Form, Formik } from "formik";
 import Image from "next/image";
 import React, { useState } from "react";
 
 import { MdCloudUpload } from "react-icons/md";
+import { InputField } from "../ui/input";
+import { SelectField } from "../ui/select";
+import { TextareaField } from "../ui/textarea";
+import { Button } from "../ui/button";
+import * as Yup from "yup";
+const ContactSchema = Yup.object().shape({
+	name: Yup.string()
+		.min(2, "Too Short!")
+		.max(70, "Too Long!")
+		.required("Required"),
+	email: Yup.string().email("Invalid email").required("Required"),
+	studentId: Yup.number()
+		.max(11, "Must be 11 digits")
+		.required("Required")
+		.typeError("Student ID must be a number"),
+	passingYear: Yup.number()
+		.max(4, "Must be 4 digits")
+		.required("Required")
+		.typeError("Passing Year must be a number"),
+	message: Yup.string().required("Required"),
+	department: Yup.string().required("Required"),
+});
 
 const Contact: React.FC = () => {
-	const [formData, setformData] = useState({
-		name: "",
-		email: "",
-		subject: "",
-		message: "",
-	});
-
-	const handleChange = (e: any) => {
-		setformData((prevData) => ({
-			...prevData,
-			[e.target.name]: e.target.value,
-		}));
-	};
-
-	const handleSubmit = (e: any) => {
-		e.preventDefault();
-		console.log(formData);
-	};
-
 	return (
 		<>
 			{/* Contact Banner */}
@@ -57,89 +61,125 @@ const Contact: React.FC = () => {
 				{/* Contact Form */}
 				<div className="lg:w-[35%] border-t-2 lg:border-l-2 lg:border-t-0 lg:pt-0 pt-6 lg:pl-6 border-t-blue-500 mx-4 lg:mx-0 lg:border-l-blue-500">
 					<div className="text-3xl font-medium mb-8">SEND MESSAGE</div>
-					<form
-						onSubmit={handleSubmit}
-						className="">
-						<div className="grid grid-cols-1 gap-3">
-							<div className="flex w-full gap-3">
-								<div className="w-full">
-									<label
-										htmlFor="name"
-										className="font-medium text-sm">
-										Name
-										<div className="border text-xs text-gray-500 border-gray-500 duration-200  p-3">
-											<input
-												type="text"
-												name="name"
-												onChange={handleChange}
-												value={formData.name}
-												className="bg-transparent w-full outline-none"
-												placeholder=""
-											/>
-										</div>
-									</label>
-								</div>
-								<div className="w-full">
-									<label
-										htmlFor="email"
-										className="font-medium text-sm">
-										Email
-										<div className="border text-xs text-gray-500 border-gray-500 duration-200  p-3">
-											<input
+					<Formik
+						initialValues={{
+							email: "",
+							name: "",
+							studentId: "",
+							passingYear: "",
+							department: "",
+							message: "",
+						}}
+						validationSchema={ContactSchema}
+						onSubmit={(values) => {
+							console.log(values);
+						}}>
+						{({ handleChange, values, setFieldValue }) => (
+							<Form>
+								<div className="flex flex-col w-full gap-4">
+									<div className="flex  gap-4 ">
+										<div className="flex w-full flex-col gap-1">
+											<InputField
 												type="email"
 												name="email"
+												label="Email"
+												placeholder="Enter your email"
+												className="w-full"
 												onChange={handleChange}
-												value={formData.email}
-												className="bg-transparent w-full outline-none"
-												placeholder=""
+											/>
+											<ErrorMessage
+												name="email"
+												component="div"
+												className="text-red-500 text-xs"
 											/>
 										</div>
-									</label>
-								</div>
-							</div>
-							<div>
-								<label
-									htmlFor="subject"
-									className="font-medium  text-sm">
-									Subject
-									<div className="border text-xs text-gray-500 border-gray-500 duration-200  p-3">
-										<input
-											type="text"
-											name="subject"
-											onChange={handleChange}
-											value={formData.subject}
-											className="bg-transparent w-full outline-none"
-											placeholder=""
+
+										<div className="flex w-full flex-col gap-1">
+											<InputField
+												name="name"
+												label="Full Name"
+												placeholder="Enter your full name"
+												onChange={handleChange}
+												className="w-full"
+											/>
+											<ErrorMessage
+												name="name"
+												component="div"
+												className="text-red-500 text-xs"
+											/>
+										</div>
+									</div>
+									<div className="flex gap-4">
+										<div className="flex w-full flex-col gap-1">
+											<InputField
+												name="studentId"
+												label="Student ID"
+												placeholder="Student ID"
+												onChange={handleChange}
+												className="w-full"
+											/>
+											<ErrorMessage
+												name="studentId"
+												component="div"
+												className="text-red-500 text-xs"
+											/>
+										</div>
+										<div className="flex w-full flex-col gap-1">
+											<InputField
+												name="passingYear"
+												label="Passing Year"
+												placeholder="Passing Year"
+												onChange={handleChange}
+												className="w-full"
+											/>
+											<ErrorMessage
+												name="passingYear"
+												component="div"
+												className="text-red-500 text-xs"
+											/>
+										</div>
+									</div>
+									<div>
+										<SelectField
+											name="department"
+											label="Department"
+											placeholder="Select your department"
+											data={["CSE", "ECE", "IT", "EE", "ME", "CE"]}
+											onValueChange={(value) =>
+												setFieldValue("department", value)
+											}
+											
+											value={values.department}
+										/>
+										<ErrorMessage
+											name="department"
+											component="div"
+											className="text-red-500 text-xs"
 										/>
 									</div>
-								</label>
-							</div>
-
-							<div>
-								<label
-									htmlFor="message"
-									className="font-medium text-sm">
-									Message
-									<div className="border text-xs text-gray-500 border-gray-500 duration-200  p-3">
-										<textarea
+									<div className="flex flex-col gap-1">
+										<TextareaField
 											name="message"
+											label="Message"
+											placeholder="Enter your message"
 											onChange={handleChange}
-											value={formData.message}
-											rows={6}
-											className="bg-transparent resize-y w-full outline-none"
-											placeholder=""
+										/>
+										<ErrorMessage
+											name="message"
+											component="div"
+											className="text-red-500 text-xs"
 										/>
 									</div>
-								</label>
-							</div>
-						</div>
+								</div>
 
-						<button
-							onClick={handleSubmit}
-							className=" bg-blue-600 mt-4 w-full lg:w-1/4 hover:bg-blue-700 duration-200 p-3 text-white">
-							Send
-						</button>
-					</form>
+								<Button
+									className="py-3 mt-4 hover:scale-100 w-1/4 max-w-xs"
+									type="submit">
+									Send
+								</Button>
+							</Form>
+						)}
+					</Formik>
 				</div>
 			</div>
 		</>

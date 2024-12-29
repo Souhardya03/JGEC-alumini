@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 
 import { EventDetails } from "@/lib/EventDetails";
+import { Button } from "../ui/button";
 
 interface TimeRemaining {
 	days: string;
@@ -84,7 +85,7 @@ const Events: React.FC = () => {
 				<div
 					key={event.id}
 					className="my-8 flex flex-col justify-center items-center">
-					<div className="bg-[#3a60c8] rounded-md flex md:flex-row flex-col items-center gap-4 justify-between md:h-full lg:h-full 2xl:h-[50vh] md:p-6 p-4 w-[90%] lg:w-[70%]">
+					<div className="bg-primary rounded-md shadow-2xl flex md:flex-row flex-col items-center gap-4 justify-between md:h-full lg:h-full 2xl:h-[50vh] md:p-6 p-4 w-[90%] lg:w-[70%]">
 						<div className="h-[30vh] md:h-[50vh] lg:h-[60vh] xl:h-[60vh] 2xl:h-full  overflow-hidden lg:flex justify-center items-center rotate-0 w-full md:w-1/2 ">
 							<Image
 								objectPosition="center"
@@ -92,7 +93,7 @@ const Events: React.FC = () => {
 								layout="fill"
 								src={event.imageUrl}
 								alt={event.title}
-								className="rounded-l-md"
+								className="rounded-md"
 							/>
 						</div>
 						<div className="flex flex-col gap-4 justify-between md:w-[60%]  h-full">
@@ -100,25 +101,25 @@ const Events: React.FC = () => {
 							<div className="flex gap-4 items-center">
 								<div className="flex flex-col items-center">
 									<div className="text-white font-medium">Days</div>
-									<div className="text-white w-12 h-12 flex justify-center items-center border border-white bg-black">
+									<div className="text-white w-12 h-12 flex justify-center items-center border rounded-md border-white bg-black">
 										{timeRemaining[event.id]?.days || "00"}
 									</div>
 								</div>
 								<div className="flex flex-col items-center">
 									<div className="text-white font-medium">Hr</div>
-									<div className="text-white w-12 h-12 flex justify-center items-center border border-white bg-black">
+									<div className="text-white w-12 h-12 flex justify-center items-center border border-white rounded-md bg-black">
 										{timeRemaining[event.id]?.hours || "00"}
 									</div>
 								</div>
 								<div className="flex flex-col items-center">
 									<div className="text-white font-medium">Min</div>
-									<div className="text-white w-12 h-12 flex justify-center items-center border border-white bg-black">
+									<div className="text-white w-12 h-12 flex justify-center items-center border border-white rounded-md bg-black">
 										{timeRemaining[event.id]?.minutes || "00"}
 									</div>
 								</div>
 								<div className="flex flex-col items-center">
 									<div className="text-white font-medium">Sec</div>
-									<div className="text-white w-12 h-12 flex justify-center items-center border border-white bg-black">
+									<div className="text-white w-12 h-12 flex justify-center items-center border border-white rounded-md bg-black">
 										{timeRemaining[event.id]?.seconds || "00"}
 									</div>
 								</div>
@@ -136,9 +137,9 @@ const Events: React.FC = () => {
 								</div>
 							</div>
 							{/* Button */}
-							<button className="border-2 lg:w-[40%] hover:bg-white hover:text-black text-lg duration-200 border-white p-3 text-white bg-[#2e4da0] font-semibold">
+							<Button className="border-2 lg:w-[40%] hover:bg-white hover:text-black text-lg duration-200 border-white p-3 text-white bg-[#2e4da0] font-semibold">
 								JOIN WITH US
-							</button>
+							</Button>
 						</div>
 					</div>
 				</div>

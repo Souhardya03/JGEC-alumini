@@ -4,6 +4,7 @@ import React from "react";
 import { EventDetails } from "@/lib/EventDetails";
 import Image from "next/image";
 import { FaLocationDot } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
 
 interface EventParams {
 	params: { id: string };
@@ -41,13 +42,13 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 	return (
 		<div className="lg:pt-[10em] pt-[4em] flex bg-[#edf1f4] justify-center items-center">
 			<div className="lg:px-14 px-4 flex flex-col lg:w-2/3 justify-center gap-8 items-center">
-				<div className="relative  w-full h-[60vh]">
+				<div className="relative rounded-md shadow-xl  w-full h-[60vh]">
 					<Image
 						src={event.imageUrl}
 						objectFit="cover"
 						layout="fill"
 						alt={event.title}
-						className="z-10 brightness-50"
+						className="z-10 rounded-md brightness-50"
 					/>
 					<div className="z-20 bg-[#161616d5] flex gap-2 flex-col w-full absolute bottom-0 p-4">
 						<div className="text-white text-lg md:text-xl font-semibold">
@@ -63,7 +64,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 					</div>
 				</div>
 				{/* Details of the event */}
-				<div className="flex bg-white w-full mb-4 flex-col py-6 rounded-md p-4">
+				<div className="flex shadow-xl bg-white w-full mb-4 flex-col py-6 rounded-md p-4">
 					<div className="flex flex-col">
 						<div className="text-black text-2xl md:text-3xl font-bold">
 							Details of the Event
@@ -74,17 +75,17 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 				</div>
 				{/* Event Schedule */}
 				<div className="w-full mb-8 flex flex-col gap-4">
-					<div className="bg-blue-500 p-4 text-center font-medium text-xl lg:text-2xl text-white">
+					<div className="bg-primary rounded-md p-4 text-center font-medium text-xl lg:text-2xl text-white">
 						EVENT SCHEDULE
 					</div>
 					<div className="w-full px-2 lg:px-4">
 						{event.schedule.map((schedule, index) => (
 							<div
 								key={index}
-								className="rounded-sm p-3 flex gap-4 items-center bg-white h-[8vh]">
-								<div className="border bg-blue-500 flex items-center justify-center text-white font-medium px-3 h-full">
+								className="rounded-md p-3 flex shadow-xl gap-4 items-center bg-white h-[8vh]">
+								<Button className="border bg-primary flex items-center justify-center text-white font-medium px-3 h-full">
 									{schedule.startTime}-{schedule.endTime}
-								</div>
+								</Button>
 								<div className="text-lg font-medium">{schedule.activity}</div>
 							</div>
 						))}

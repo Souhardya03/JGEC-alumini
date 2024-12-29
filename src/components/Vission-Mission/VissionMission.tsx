@@ -30,7 +30,7 @@ const VissionMission: React.FC = () => {
 			</div>
 			{/* About Details */}
 			<div className=" py-14 flex justify-center flex-col items-center  bg-[#edf1f4]">
-				<div className=" relative  shadow-xl bg-white lg:w-2/3 w-[90%] xl:h-full lg:h-full md:h-full my-10 2xl:h-full ">
+				<div className=" relative  shadow-xl bg-white  rounded-md lg:w-2/3 w-[90%] xl:h-full lg:h-full md:h-full my-10 2xl:h-full ">
 					<div className="absolute rotate-0 right-0 -top-[0.8em] li text-6xl text-white">
 						2010
 					</div>
@@ -39,7 +39,7 @@ const VissionMission: React.FC = () => {
 							loading="lazy"
 							src="https://codeboxr.net/themedemo/unialumni/html/assets/images/about-page/about-img-1.jpg"
 							alt=""
-							className="h-full w-full object-cover"
+							className="h-full rounded-md w-full object-cover"
 						/>
 					</div>
 					<div className="text-xl p-4  lg:flex  flex-col items-end xl:gap-2  h-1/2 ">
@@ -66,7 +66,7 @@ const VissionMission: React.FC = () => {
 						</div>
 					</div>
 				</div>
-				<div className=" relative  shadow-xl bg-white lg:w-2/3 w-[90%]  my-10 ">
+				<div className=" relative rounded-md  shadow-xl bg-white lg:w-2/3 w-[90%]  my-10 ">
 					<div className="absolute rotate-0 left-0 -top-[0.8em]  text-6xl text-white ">
 						2010
 					</div>
@@ -75,7 +75,7 @@ const VissionMission: React.FC = () => {
 							loading="lazy"
 							src="https://codeboxr.net/themedemo/unialumni/html/assets/images/about-page/about-img-1.jpg"
 							alt=""
-							className="h-full w-full object-cover"
+							className="h-full w-full rounded-md object-cover"
 						/>
 					</div>
 					<div className="text-xl   flex p-4 flex-col  gap-2  h-1/2 ">
@@ -177,16 +177,16 @@ const VissionMission: React.FC = () => {
 					</div>
 					{/* Member Details */}
 					<div className="w-full  flex flex-wrap justify-center gap-4  p-10">
-						<div className=" relative group  duration-200 lg:h-[50vh] h-[40vh] mb-10 lg:w-[40vh]">
+						<div className=" relative group rounded-md  duration-200 lg:h-[50vh] h-[40vh] mb-10 lg:w-[40vh]">
 							<img
 								
 								loading="lazy"
 								src="https://codeboxr.net/themedemo/unialumni/html/assets/images/committee/commitee-1.jpg"
 								alt=""
-								className="object-cover duration-200  group-hover:brightness-50 group-hover:-translate-y-3 h-full w-full"
+								className="object-cover duration-200  group-hover:brightness-50 rounded-md group-hover:-translate-y-3 h-full w-full"
 							/>
 							<div className="lg:h-[10vh] group-hover:-translate-y-3 duration-200 h-[8vh] absolute flex justify-center items-center rotate-0 -bottom-6 w-full ">
-								<div className="bg-blue-500 h-full w-2/3"></div>
+								<div className="bg-blue-500 h-full rounded-md w-2/3"></div>
 							</div>
 						</div>
 					</div>
@@ -199,7 +199,7 @@ const VissionMission: React.FC = () => {
 						<div className="border border-blue-400 w-1/2"></div>
 					</div>
 					<div className="flex lg:px-14 justify-center gap-8 mt-14 flex-wrap">
-						<div className=" h-[40vh] group lg:mb-10 mb-16 hover:scale-105 duration-200 bg-white relative w-[40vh] lg:w-[50vh]">
+						<div className=" h-[40vh] group lg:mb-10 mb-16 hover:scale-105 duration-200 bg-white shadow-xl rounded-md relative w-[40vh] lg:w-[50vh]">
 							<div className="h-full w-full flex justify-center absolute -top-[3em]">
 								<div className="w-[20vh] group-hover:border-4 duration-200  group-hover:border-blue-400 h-[20vh] rounded-full">
 									<img
@@ -218,7 +218,7 @@ const VissionMission: React.FC = () => {
 								laboriosam ipsa?
 							</div>
 							<div className="h-[10vh] flex justify-end w-full -bottom-[2em] absolute rotate-0">
-								<div className="bg-blue-400 h-full w-[80%]"></div>
+								<div className="bg-blue-400 h-full rounded-md w-[80%]"></div>
 							</div>
 						</div>
 					</div>

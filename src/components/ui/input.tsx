@@ -64,7 +64,7 @@ const InputField: React.FC<InputFieldProps> = ({
           {...props}
           id={name}
           name={name}
-          type={isViewPass ? 'text' : props.type}
+          type={!isViewPass ? 'text' : props.type}
           className={cn("p-0 border-none w-full", inputClassName)}
         />
         {rightIcon && (
