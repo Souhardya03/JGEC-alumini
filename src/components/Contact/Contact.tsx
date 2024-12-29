@@ -9,24 +9,8 @@ import { InputField } from "../ui/input";
 import { SelectField } from "../ui/select";
 import { TextareaField } from "../ui/textarea";
 import { Button } from "../ui/button";
-import * as Yup from "yup";
-const ContactSchema = Yup.object().shape({
-	name: Yup.string()
-		.min(2, "Too Short!")
-		.max(70, "Too Long!")
-		.required("Required"),
-	email: Yup.string().email("Invalid email").required("Required"),
-	studentId: Yup.number()
-		.max(11, "Must be 11 digits")
-		.required("Required")
-		.typeError("Student ID must be a number"),
-	passingYear: Yup.number()
-		.max(4, "Must be 4 digits")
-		.required("Required")
-		.typeError("Passing Year must be a number"),
-	message: Yup.string().required("Required"),
-	department: Yup.string().required("Required"),
-});
+import { ContactSchema } from "@/schemas/ContactSchema";
+
 
 const Contact: React.FC = () => {
 	return (
@@ -46,7 +30,7 @@ const Contact: React.FC = () => {
 						loading="lazy"
 						layout="fill"
 						objectFit="cover"
-						src="/assets/IMG_20240429_013756.jpg"
+						src="/assets/membership.jpg"
 						alt=""
 						className=" brightness-[30%]"
 					/>
@@ -77,7 +61,7 @@ const Contact: React.FC = () => {
 						{({ handleChange, values, setFieldValue }) => (
 							<Form>
 								<div className="flex flex-col w-full gap-4">
-									<div className="flex  gap-4 ">
+									<div className="flex md:flex-row flex-col gap-4 ">
 										<div className="flex w-full flex-col gap-1">
 											<InputField
 												type="email"
@@ -173,7 +157,7 @@ const Contact: React.FC = () => {
 								</div>
 
 								<Button
-									className="py-3 mt-4 hover:scale-100 w-1/4 max-w-xs"
+									className="py-3 text-white mt-4 hover:scale-100 w-1/4 max-w-xs"
 									type="submit">
 									Send
 								</Button>
