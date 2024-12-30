@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['jgecalum.org'],
+        domains: ['jgecalum.org','flowbite.s3.amazonaws.com'],
     }
 };
 
