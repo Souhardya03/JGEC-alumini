@@ -11,7 +11,7 @@ const Giving_Back = () => {
 							Giving<span className="text-white"> Back</span>
 						</div>
 						<div className="lg:text-xl text-xs px-4 lg:w-1/2 text-center">
-							What you can donate to your alma mater?
+							What can you donate to your alma mater?
 						</div>
 					</div>
 					<Image
