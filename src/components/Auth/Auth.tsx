@@ -65,7 +65,7 @@ const Auth: React.FC = () => {
 						)}
 					</Formik>
 				</div>
-				<div className=" w-full max-lg:max-w-lg lg:w-2/3 border-t-2  max-lg:mt-4 pt-8 lg:border-l-2 border-neutral-200 lg:pl-8">
+				<div className=" w-full max-lg:max-w-lg lg:w-2/3 max-lg:border-t-2  max-lg:mt-4 pt-8 lg:border-l-2 border-neutral-200 lg:pl-8">
 					<div className="text-xl sm:text-2xl font-medium mb-4 sm:mb-8">
 						Registration Form
 					</div>
@@ -255,7 +255,7 @@ const Auth: React.FC = () => {
 									</div>
 								</div>
 								<Button
-									className="py-3 text-white hover:scale-100 w-full max-w-xs"
+									className="py-3 text-white hover:scale-100 w-full max-w-lg lg:max-w-xs"
 									type="submit">
 									Registration
 								</Button>

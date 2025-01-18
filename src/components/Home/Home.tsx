@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules"; 
 import Link from "next/link";
 import { Button } from "../ui/button";

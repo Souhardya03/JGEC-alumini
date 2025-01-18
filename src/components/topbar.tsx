@@ -14,7 +14,7 @@ const Topbar = () => {
 					<div>
 						<Link
 							href="https://jgec.ac.in/"
-							className="bg-[#663298] p-2 px-4 font-medium ">
+							className="bg-[#663298] p-2.5 px-4 font-medium ">
 							JGEC OFFICIAL WEBSITE
 						</Link>
 					</div>

@@ -6,31 +6,17 @@ import React from "react";
 
 
 import { ScholarshipDetails } from "@/lib/ScholarshipsData";
+import SectionHeader from "../section-header";
 
 const Scholarship = () => {
 	return (
-		<>
-			<div className="lg:mt-[8em] w-full   mt-[6em] h-[60vh] overflow-hidden  ">
-				<div className="h-full  rotate-0 w-full">
-					<div className="text-white h-full z-20 w-full top-0 flex flex-col items-center justify-center gap-3  absolute ">
-						<div className="lg:text-5xl text-4xl text-blue-400 font-medium">
-							Scho<span className="text-white">larships</span>
-						</div>
-						<div className="lg:text-lg text-xs px-4 lg:w-1/2 text-center">
-							We are committed to helping students achieve their academic goals
-							by providing them with the necessary resources and scholarships.
-						</div>
-					</div>
-					<Image
-						loading="lazy"
-						layout="fill"
-						objectFit="cover"
-						src="/assets/membership.jpg"
-						alt=""
-						className=" brightness-[30%]"
-					/>
-				</div>
-			</div>
+		<> 
+			<SectionHeader
+				highlightTitle="Scholarships"
+				normalTitle="Programs"
+				description="We are committed to helping students achieve their academic goals by providing them with the necessary resources and scholarships."
+			/>
+
 			{/* Scholarship Details */}
 			<div className="h-screen flex items-center px-3 justify-center">
 				<div className="w-full lg:w-[30%]">
