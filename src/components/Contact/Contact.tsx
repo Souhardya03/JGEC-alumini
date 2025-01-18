@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
 						<div className="lg:text-5xl text-3xl text-blue-400 font-medium">
 							Get <span className="text-white">in Touch</span>
 						</div>
-						<div className="text-sm px-4 lg:w-1/2 text-center">
+						<div className="text-sm lg:text-lg px-4 lg:w-1/2 text-center">
 							For any query or suggestion, please feel free to contact us.
 						</div>
 					</div>

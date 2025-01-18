@@ -16,7 +16,7 @@ const Scholarship = () => {
 						<div className="lg:text-5xl text-4xl text-blue-400 font-medium">
 							Scho<span className="text-white">larships</span>
 						</div>
-						<div className="lg:text-sm text-xs px-4 lg:w-1/2 text-center">
+						<div className="lg:text-lg text-xs px-4 lg:w-1/2 text-center">
 							We are committed to helping students achieve their academic goals
 							by providing them with the necessary resources and scholarships.
 						</div>
