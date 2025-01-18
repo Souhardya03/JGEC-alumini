@@ -8,7 +8,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RxCross2 } from "react-icons/rx";
 import { Button } from "./ui/button";
-import { Drawer, DrawerClose, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle } from "./ui/drawer";
+import { Drawer,DrawerContent } from "./ui/drawer";
 
 const Links = [
 	{
@@ -176,16 +176,16 @@ const Navbar = () => {
 						</div>
 						<div className="flex text-white mt-4 gap-6">
 							<Link href="/login">
-								<Button>
+								<Button onClick={() => setOpenNav(false)} >
 									LOGIN
 								</Button>
 							</Link>
 							<Link href="/login">
-								<Button className="bg-[#1cad6c]">
+								<Button className="bg-[#1cad6c]" onClick={() => setOpenNav(false)} >
 									SIGN UP
 								</Button>
 							</Link>
-							<Link href="https://jgec.ac.in/" target="_blank" >
+							<Link href="https://jgec.ac.in/" target="_blank" onClick={() => setOpenNav(false)} >
 								<Button className="bg-[#663298] ">
 									VISIT
 								</Button>

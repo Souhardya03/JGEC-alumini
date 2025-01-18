@@ -4,6 +4,9 @@ import "./globals.css";
 import Topbar from "@/components/topbar";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const inter = Inter({
 	subsets: ["latin"],

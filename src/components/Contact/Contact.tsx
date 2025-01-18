@@ -1,49 +1,43 @@
 "use client";
 
 import { ErrorMessage, Form, Formik } from "formik";
-import Image from "next/image";
-import React, { useState } from "react";
-
-import { MdCloudUpload } from "react-icons/md";
+import React from "react";
 import { InputField } from "../ui/input";
 import { SelectField } from "../ui/select";
 import { TextareaField } from "../ui/textarea";
 import { Button } from "../ui/button";
 import { ContactSchema } from "@/schemas/ContactSchema";
+import SectionHeader from "../section-header";
 
 
 const Contact: React.FC = () => {
 	return (
 		<>
 			{/* Contact Banner */}
-			<div className="lg:mt-[8em] w-full   mt-[6em] h-[60vh] overflow-hidden  ">
-				<div className="h-full  rotate-0 w-full">
-					<div className="text-white h-full z-20 w-full top-0 flex flex-col items-center justify-center gap-3  absolute ">
-						<div className="lg:text-5xl text-3xl text-blue-400 font-medium">
-							Get <span className="text-white">in Touch</span>
-						</div>
-						<div className="text-sm lg:text-lg px-4 lg:w-1/2 text-center">
-							For any query or suggestion, please feel free to contact us.
-						</div>
-					</div>
-					<Image
+			<SectionHeader
+				highlightTitle="Get in"
+				normalTitle="Touch"
+				description="For any query or suggestion, please feel free to contact us."
+			/>
+
+			<div className="h-full w-full max-w-screen-max_screen px-4 md:px-10 py-16 overflow-hidden flex lg:flex-row flex-col justify-center gap-8 items-center bg-white">
+				{/* TODO: Implement Map  */}
+				<div className="w-full lg:w-1/2">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5169.520136596787!2d88.69721568836566!3d26.544720329066894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e47bce687f169d%3A0x4152036d0d736d37!2sJalpaiguri%20Government%20Engineering%20College!5e1!3m2!1sen!2sin!4v1737196989015!5m2!1sen!2sin"
+						width="600"
+						height="450"
+						style={{ border: 0 }}
+						allowFullScreen={true}
 						loading="lazy"
-						layout="fill"
-						objectFit="cover"
-						src="/assets/membership.jpg"
-						alt=""
-						className=" brightness-[30%]"
+						referrerPolicy="no-referrer-when-downgrade"
+						className="w-full h-auto lg:h-[30rem] min-h-80 object-cover rounded-md"
 					/>
 				</div>
-			</div>
-
-			<div className="h-full lg:py-28 py-20 overflow-hidden flex lg:flex-row flex-col justify-center gap-8 items-center bg-white">
-				{/* TODO: Implement Map  */}
-				<div className="">TODO : Implement Map here</div>
 				{/* Divider */}
 				{/* <div className="border border-blue-500 h-1/2 rounded-md"></div> */}
 				{/* Contact Form */}
-				<div className="lg:w-[35%] border-t-2 lg:border-l-2 lg:border-t-0 lg:pt-0 pt-6 lg:pl-6 border-t-blue-500 mx-4 lg:mx-0 lg:border-l-blue-500">
+				<div className="w-full lg:w-1/2 border-t-2 lg:border-l-2 lg:border-t-0 lg:pt-0 pt-6 lg:pl-6 border-t-neutral-200 mx-4 lg:mx-0 lg:border-l-normal-200">
 					<div className="text-3xl font-medium mb-8">SEND MESSAGE</div>
 					<Formik
 						initialValues={{
@@ -132,7 +126,7 @@ const Contact: React.FC = () => {
 											onValueChange={(value) =>
 												setFieldValue("department", value)
 											}
-											
+
 											value={values.department}
 										/>
 										<ErrorMessage
@@ -159,7 +153,7 @@ const Contact: React.FC = () => {
 								<Button
 									className="py-3 text-white mt-4 hover:scale-100 w-1/4 max-w-xs"
 									type="submit">
-									Send
+									Submit
 								</Button>
 							</Form>
 						)}

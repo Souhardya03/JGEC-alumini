@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 
 import { EventDetails } from "@/lib/EventDetails";
 import { Button } from "../ui/button";
+import SectionHeader from "../section-header";
 
 interface TimeRemaining {
 	days: string;
@@ -62,25 +63,11 @@ const Events: React.FC = () => {
 
 	return (
 		<>
-			<div className="lg:mt-[8em] mt-[6em] h-[60vh] overflow-hidden">
-				<div className="h-full rotate-0 w-full">
-					<Image
-						layout="fill"
-						objectFit="cover"
-						src="/assets/membership.jpg"
-						alt=""
-						className="object-cover brightness-[30%]"
-					/>
-					<div className="text-white h-full w-full top-0 flex flex-col items-center justify-center gap-2 absolute">
-						<div className="md:text-5xl text-4xl text-white font-medium">
-							All <span className="text-blue-400">Events</span> Archive
-						</div>
-						<div className="text-sm text-center">
-							Get information about all our events.
-						</div>
-					</div>
-				</div>
-			</div>
+			<SectionHeader
+				highlightTitle="All Events"
+				normalTitle="Archive"
+				description="Get information about all our upcoming events."
+			/>
 			{EventDetails.map((event) => (
 				<div
 					key={event.id}
