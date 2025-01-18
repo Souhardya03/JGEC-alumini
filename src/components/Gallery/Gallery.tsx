@@ -69,7 +69,7 @@ const MasonryGallery = () => {
 						<div className="md:text-6xl text-5xl text-white font-medium">
 							<span className="text-blue-400">Ga</span>llery
 						</div>
-						<div className="text-sm text-center">
+						<div className="text-sm lg:text-lg text-center">
 							Get all the latest images from our gallery.
 						</div>
 					</div>

@@ -21,7 +21,7 @@ const VissionMission: React.FC = () => {
 						<div className="text-5xl text-blue-400 font-medium">
 							About <span className="text-white">Us</span>
 						</div>
-						<div className="text-xs  text-center">
+						<div className="text-xs lg:text-lg  text-center">
 							Alumni Needs enables you to harness the power of your alumni
 							network. Whatever may be the need
 						</div>
