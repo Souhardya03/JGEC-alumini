@@ -74,11 +74,7 @@ export async function POST(req) {
 						gradeSemester3,
 						gradeSemester4,
 						gradeSemester5,
-<<<<<<< HEAD
 						averag,
-=======
-						average,
->>>>>>> 17f9d192e409443f1a61f1637c9ba8c1bf02dfee
 						department,
 						residentialAddress,
 						specialAchievement,
