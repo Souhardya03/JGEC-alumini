@@ -7,6 +7,7 @@ import Footer from "@/components/footer";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import {Toaster} from "react-hot-toast"
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
 			<body className={inter.className}>
 				<Topbar />
 				<Navbar />
+				<Toaster/>
 				{children}
 				<Footer />
 			</body>
