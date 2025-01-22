@@ -6,19 +6,14 @@ export const ScholarshipSchema = Yup.object().shape({
 		.max(70, "Too Long!")
 		.required("Required"),
 	email: Yup.string().email("Invalid email").required("Required"),
-	studentId: Yup.number()
-		.max(11, "Must be 11 digits")
+	studentId: Yup.string()
+		.min(11, "Must be 11 Digit")
+		.max(11, "Must be 11 Digit")
 		.required("Required")
 		.typeError("Student ID must be a number"),
-	dob: Yup.number().required("Required"),
-	contactHome: Yup.number()
-		.max(10, "Must be 10 digits")
-		.required("Required")
-		.typeError("Must be a number"),
-	contact: Yup.number()
-		.max(10, "Must be 10 digits")
-		.required("Required")
-		.typeError("Must be a number"),
+	dob: Yup.date().required("Required"),
+	contactHome: Yup.string().min(10,"Must be 10 digit").max(10,"Must be 10 digit").required("Required").typeError("Must be a number"),
+	contact: Yup.string().min(10,"Must be 10 digit").max(10,"Must be 10 digit").required("Required").typeError("Must be a number"),
 	numberofdirectfamilyMembers: Yup.number().required("Required"),
 	fatherOccupation: Yup.string()
 		.min(2, "Too Short!")
@@ -27,7 +22,8 @@ export const ScholarshipSchema = Yup.object().shape({
 	totalEarningMembers: Yup.number().required("Required"),
 	totalFamilyIncome: Yup.number().required("Required"),
 	eachFamilyIncome: Yup.number().required("Required"),
-	jgecIntakeYear: Yup.number()
+	jgecIntakeYear: Yup.string()
+		.min(4, "Must be 4 digits")
 		.max(4, "Must be 4 digits")
 		.required("Required")
 		.typeError("Passing Year must be a number"),
@@ -35,14 +31,13 @@ export const ScholarshipSchema = Yup.object().shape({
 		.min(2, "Too Short!")
 		.max(70, "Too Long!")
 		.required("Required"),
-	percentHigherSecondary: Yup.number().required("Required"),
-	gradeSemester1: Yup.number().required("Required"),
-	gradeSemester2: Yup.number().required("Required"),
-	gradeSemester3: Yup.number().required("Required"),
-	gradeSemester4: Yup.number().required("Required"),
-	gradeSemester5: Yup.number().required("Required"),
-	average: Yup.number().required("Required"),
-	message: Yup.string().required("Required"),
+	percentHigherSecondary: Yup.string().required("Required"),
+	gradeSemester1: Yup.string().required("Required"),
+	gradeSemester2: Yup.string().required("Required"),
+	gradeSemester3: Yup.string().required("Required"),
+	gradeSemester4: Yup.string().required("Required"),
+	gradeSemester5: Yup.string().required("Required"),
+	average: Yup.string().required("Required"),
 	department: Yup.string().required("Required"),
 	residentialAddress: Yup.string().required("Required"),
 	specialAchievement: Yup.string().required("Required"),
