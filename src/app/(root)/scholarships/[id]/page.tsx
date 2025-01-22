@@ -22,6 +22,17 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 	const { id } = params;
 	const data = ScholarshipDetails.filter((e) => e.id === Number(id));
 
+	const handleFormSubmit = (values: any) => {
+		// console.log(values);
+		fetch("/api/submit", {
+			method: "POST",
+			body:JSON.stringify(values),			
+			headers: {
+				"Content-Type": "application/json",
+			},
+		});
+	};
+
 	return (
 		<div className="grid grid-cols-1 ">
 			<div className=" flex lg:flex-row flex-col px-4 lg:px-14 justify-center items-center bg-[#edf1f4] gap-4 pt-[6em] lg:pt-[10em]">
@@ -106,9 +117,9 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 							specialAchievement: "",
 							jobCampusing: "",
 						}}
-						validationSchema={ScholarshipSchema}
+						// validationSchema={ScholarshipSchema}
 						onSubmit={(values) => {
-							console.log(values);
+							handleFormSubmit(values);
 						}}>
 						{({ handleChange, values, setFieldValue }) => (
 							<Form>
