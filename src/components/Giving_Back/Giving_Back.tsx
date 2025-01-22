@@ -5,11 +5,26 @@ import SectionHeader from "../section-header";
 const Giving_Back = () => {
 	return (
 		<>
-			<SectionHeader
-				highlightTitle="Giving"
-				normalTitle=" Back"
-				description="What can you donate to your alma mater?"
-			/> 
+			<div className="lg:mt-[8em] w-full   mt-[6em] h-[60vh] overflow-hidden  ">
+				<div className="h-full  rotate-0 w-full">
+					<div className="text-white h-full z-20 w-full top-0 flex flex-col items-center justify-center gap-3  absolute ">
+						<div className="lg:text-5xl text-4xl text-blue-400 font-medium">
+							Giving<span className="text-white"> Back</span>
+						</div>
+						<div className="lg:text-xl text-xs px-4 lg:w-1/2 text-center">
+							What can you donate to your alma mater?
+						</div>
+					</div>
+					<Image
+						loading="lazy"
+						layout="fill"
+						objectFit="cover"
+						src="/assets/membership.jpg"
+						alt=""
+						className=" brightness-[30%]"
+					/>
+				</div>
+			</div>
 			<div className="pb-14">
 				<div className="lg:p-14 p-6 w-full flex flex-col">
 					<h2 className="lg:text-4xl md:text-3xl text-2xl text-primary  font-semibold">
