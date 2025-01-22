@@ -6,33 +6,45 @@ import { InputField } from "@/components/ui/input";
 
 import { SelectField } from "@/components/ui/select";
 import { TextareaField } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 import { ScholarshipDetails } from "@/lib/ScholarshipsData";
 import { ScholarshipSchema } from "@/schemas/ScholarshipSchema";
 
 import { ErrorMessage, Formik, Form } from "formik";
 
 import Image from "next/image";
-import React from "react";
-
+import React, { useState } from "react";
+import { toast } from "react-hot-toast";
 interface EventParams {
 	params: { id: string };
 }
 
 const Page: React.FC<EventParams> = ({ params }: EventParams) => {
+	const [loading, setLoading] = useState(false);
 	const { id } = params;
 	const data = ScholarshipDetails.filter((e) => e.id === Number(id));
 
-	const handleFormSubmit = (values: any) => {
-		// console.log(values);
-		fetch("/api/submit", {
-			method: "POST",
-			body:JSON.stringify(values),			
-			headers: {
-				"Content-Type": "application/json",
-			},
-		});
+	const handleFormSubmit = async (values: any) => {
+		try {
+			setLoading(true);
+			await toast.promise(
+				fetch("/api/submit", {
+					method: "POST",
+					body: JSON.stringify(values),
+					headers: { "Content-Type": "application/json" },
+				}),
+				{
+					loading: "Submitting your application...",
+					success: "Application submitted successfully!",
+					error: "Failed to submit the application.",
+				}
+			);
+		} catch (error) {
+			console.error("Error:", error);
+		} finally {
+			setLoading(false);
+		}
 	};
-
 	return (
 		<div className="grid grid-cols-1 ">
 			<div className=" flex lg:flex-row flex-col px-4 lg:px-14 justify-center items-center bg-[#edf1f4] gap-4 pt-[6em] lg:pt-[10em]">
