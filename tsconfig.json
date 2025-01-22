@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Vission-Mission/VissionMission.tsx", "src/lib/EventDetails.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Vission-Mission/VissionMission.tsx", "src/lib/EventDetails.ts", "src/lib/googleapi.js", "src/app/api/submit/route.js"],
   "exclude": ["node_modules"]
 }
