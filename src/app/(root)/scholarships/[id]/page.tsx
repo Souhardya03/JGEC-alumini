@@ -21,10 +21,13 @@ interface EventParams {
 
 const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 	const [loading, setLoading] = useState(false);
+	
 	const { id } = params;
 	const data = ScholarshipDetails.filter((e) => e.id === Number(id));
 
 	const handleFormSubmit = async (values: any) => {
+		console.log(values);
+
 		try {
 			setLoading(true);
 			await toast.promise(
@@ -129,11 +132,12 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 							specialAchievement: "",
 							jobCampusing: "",
 						}}
-						validationSchema={ScholarshipSchema}
 						onSubmit={(values) => {
-							handleFormSubmit(values);
-						}}>
-						{({ handleChange, values, setFieldValue }) => (
+							handleFormSubmit(values)
+						}}
+						validationSchema={ScholarshipSchema}
+						>
+						{({ handleChange, values, setFieldValue  }) => (
 							<Form>
 								<div className="grid lg:grid-cols-2 grid-col-1 gap-4">
 									<div className="flex flex-col gap-1">
@@ -151,6 +155,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 									<div className="flex flex-col gap-1">
 										<InputField
+											type="number"
 											name="studentId"
 											label="Student ID"
 											placeholder="Student ID"
@@ -233,7 +238,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 									<div className="flex flex-col gap-1">
 										<InputField
-											type="text"
+											type="number"
 											name="numberofdirectfamilyMembers"
 											label="Number of direct family members"
 											placeholder="xx"
@@ -247,7 +252,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 									<div className="flex flex-col gap-1">
 										<InputField
-											type="text"
+											type="number"
 											name="totalEarningMembers"
 											label="Total number of earning members (in family)"
 											placeholder="xx"
@@ -289,7 +294,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 									<div className="flex flex-col gap-1">
 										<InputField
-											type="number"
+											type="text"
 											name="jgecIntakeYear"
 											label="Jgec intake year "
 											placeholder="xxxx"
@@ -329,7 +334,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 									<div className="flex flex-col gap-1">
 										<InputField
-											type="number"
+											type="text"
 											name="percentHigherSecondary"
 											label="Percentage obtained in Higher Secondary (+12) "
 											placeholder="xx %"
@@ -343,7 +348,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 									<div className="flex flex-col gap-1">
 										<InputField
-											type="number"
+											type="text"
 											name="gradeSemester1"
 											label="Grade marks in 1st semester "
 											placeholder="x.xx"
@@ -357,7 +362,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 									<div className="flex flex-col gap-1">
 										<InputField
-											type="number"
+											type="text"
 											name="gradeSemester2"
 											label="Grade marks in 2nd semester "
 											placeholder="x.xx"
@@ -371,7 +376,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 									<div className="flex flex-col gap-1">
 										<InputField
-											type="number"
+											type="text"
 											name="gradeSemester3"
 											label="Grade marks in 3rd semester "
 											placeholder="x.xx"
@@ -385,7 +390,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 									<div className="flex flex-col gap-1">
 										<InputField
-											type="number"
+											type="text"
 											name="gradeSemester4"
 											label="Grade marks in 4th semester "
 											placeholder="x.xx"
@@ -399,7 +404,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 									<div className="flex flex-col gap-1">
 										<InputField
-											type="number"
+											type="text"
 											name="gradeSemester5"
 											label="Grade marks in 5th semester "
 											placeholder="x.xx"
@@ -413,7 +418,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 									<div className="flex flex-col gap-1">
 										<InputField
-											type="number"
+											type="text"
 											name="average"
 											label="Average marks of first 5 semisters"
 											placeholder="x.xx"
@@ -495,6 +500,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 								</div>
 								<Button
+								
 									className="py-3 hover:scale-100 w-full max-w-xs"
 									type="submit">
 									Submit
