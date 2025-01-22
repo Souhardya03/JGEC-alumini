@@ -129,7 +129,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 							specialAchievement: "",
 							jobCampusing: "",
 						}}
-						// validationSchema={ScholarshipSchema}
+						validationSchema={ScholarshipSchema}
 						onSubmit={(values) => {
 							handleFormSubmit(values);
 						}}>
