@@ -21,7 +21,7 @@ const SectionHeader: FC<IProps> = ({ highlightTitle, normalTitle, description, i
                         className="object-cover brightness-[30%]"
                     />
                     <div className="text-white h-full w-full top-0 flex flex-col items-center justify-center gap-2 md:gap-4  absolute px-4">
-                        <div className="text-3xl lg:text-5xl text-blue-400 font-medium">
+                        <div className="text-3xl text-center lg:text-5xl text-blue-400 font-medium">
                             {highlightTitle} <span className="text-white ml-2">{normalTitle}</span>
                         </div>
                         <div className="text-sm lg:text-lg  text-center max-w-2xl">
