@@ -139,7 +139,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 						onSubmit={(values) => {
 							handleFormSubmit(values);
 						}}
-						// validationSchema={ScholarshipSchema}
+						validationSchema={ScholarshipSchema}
 						>
 						{({ handleChange, values, setFieldValue }) => (
 							<Form>
