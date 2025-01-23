@@ -31,7 +31,7 @@ const Scholarship = () => {
 										key={index}
 										className="px-4 py-2.5 border-b border-neutral-200 text-neutral-950">
 										<Link
-											href={`/scholarships/${item.id}`}
+											href={`/scholarships/${item._id}`}
 											className="flex flex-col gap-2">
 											<h4 className="text-sm font-medium">{item.title}</h4>
 											<p className="text-xs">{item.subtitle}</p>

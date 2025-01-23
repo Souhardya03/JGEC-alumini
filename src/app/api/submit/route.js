@@ -4,7 +4,10 @@ import { NextResponse } from "next/server";
 export async function POST(req) {
 	try {
 		const body = await req.json();
+		
+		
 		const {
+			scholarshipName,
 			name,
 			studentId,
 			dob,
@@ -31,6 +34,9 @@ export async function POST(req) {
 			jobCampusing,
 		} = body;
 
+		console.log(scholarshipName);
+		
+
 		// Authenticate with Google Sheets API
 		const auth = new google.auth.GoogleAuth({
 			credentials: {
@@ -50,7 +56,7 @@ export async function POST(req) {
 		// Append data to the spreadsheet
 		const response = await sheets.spreadsheets.values.append({
 			spreadsheetId: process.env.SPREADSHEET_ID, // Make sure this is correctly set in your .env file
-			range: "Sheet1!A1", // Replace with the correct sheet name and range
+			range:`${scholarshipName}!A1`,// Replace with the correct sheet name and range
 			valueInputOption: "USER_ENTERED",
 			requestBody: {
 				values: [
