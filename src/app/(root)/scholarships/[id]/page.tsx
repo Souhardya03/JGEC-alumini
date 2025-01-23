@@ -21,12 +21,15 @@ interface EventParams {
 
 const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 	const [loading, setLoading] = useState(false);
-	
+
 	const { id } = params;
-	const data = ScholarshipDetails.filter((e) => e.id === Number(id));
+	
+	const data = ScholarshipDetails.filter((e) => e._id === (id));
+	
+	
 
 	const handleFormSubmit = async (values: any) => {
-		console.log(values);
+		// console.log(values);
 
 		try {
 			setLoading(true);
@@ -67,7 +70,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 								tools for their enlightenment to outer world outside campus and
 								thus to highlight glory of JGEC to outsiders.
 							</div>
-							<div>{data[0].description}</div>
+							<div>{data[0]?.description}</div>
 						</div>
 					</div>
 				</div>
@@ -86,7 +89,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 						</div>
 						<div>
 							<span className="font-semibold">Amount of scholarship :</span>{" "}
-							{data[0].amount}
+							{data[0].amountdetails}
 						</div>
 						<div>
 							<span className="font-semibold">When to apply :</span>{" "}
@@ -107,6 +110,7 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 					</p>
 					<Formik
 						initialValues={{
+							scholarshipName:data[0].title,
 							name: "",
 							studentId: "",
 							dob: "",
@@ -133,11 +137,11 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 							jobCampusing: "",
 						}}
 						onSubmit={(values) => {
-							handleFormSubmit(values)
+							handleFormSubmit(values);
 						}}
-						validationSchema={ScholarshipSchema}
+						// validationSchema={ScholarshipSchema}
 						>
-						{({ handleChange, values, setFieldValue  }) => (
+						{({ handleChange, values, setFieldValue }) => (
 							<Form>
 								<div className="grid lg:grid-cols-2 grid-col-1 gap-4">
 									<div className="flex flex-col gap-1">
@@ -346,7 +350,10 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 											className="text-red-500 text-xs"
 										/>
 									</div>
-									<div className="flex flex-col gap-1">
+									<div
+										className={`flex ${
+											data[0].firstSem ? "block" : "hidden"
+										} flex-col gap-1`}>
 										<InputField
 											type="text"
 											name="gradeSemester1"
@@ -360,7 +367,9 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 											className="text-red-500 text-xs"
 										/>
 									</div>
-									<div className="flex flex-col gap-1">
+									<div className={`flex ${
+											data[0].secondSem ? "block" : "hidden"
+										} flex-col gap-1`}>
 										<InputField
 											type="text"
 											name="gradeSemester2"
@@ -374,7 +383,9 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 											className="text-red-500 text-xs"
 										/>
 									</div>
-									<div className="flex flex-col gap-1">
+									<div className={`flex ${
+											data[0].thirdSem ? "block" : "hidden"
+										} flex-col gap-1`}>
 										<InputField
 											type="text"
 											name="gradeSemester3"
@@ -388,7 +399,9 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 											className="text-red-500 text-xs"
 										/>
 									</div>
-									<div className="flex flex-col gap-1">
+									<div className={`flex ${
+											data[0].fourthSem ? "block" : "hidden"
+										} flex-col gap-1`}>
 										<InputField
 											type="text"
 											name="gradeSemester4"
@@ -402,7 +415,9 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 											className="text-red-500 text-xs"
 										/>
 									</div>
-									<div className="flex flex-col gap-1">
+									<div className={`flex ${
+											data[0].fifthSem ? "block" : "hidden"
+										} flex-col gap-1`}>
 										<InputField
 											type="text"
 											name="gradeSemester5"
@@ -447,6 +462,8 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 											className="text-red-500 text-xs"
 										/>
 									</div>
+								</div>
+								<div className="grid pt-4 lg:grid-cols-2 grid-col-1 gap-4">
 									<div>
 										<TextareaField
 											name="specialAchievement"
@@ -500,7 +517,6 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 									</div>
 								</div>
 								<Button
-								
 									className="py-3 hover:scale-100 w-full max-w-xs"
 									type="submit">
 									Submit
@@ -510,17 +526,18 @@ const Page: React.FC<EventParams> = ({ params }: EventParams) => {
 					</Formik>
 				</div>
 				<div className="h-full lg:w-1/2 lg:px-4  rounded-md">
-					<div className="flex rotate-0 shadow-xl h-[40vh] bg-white items-center justify-center">
+					<div className="flex rotate-0 rounded-md overflow-hidden shadow-xl  bg-white h-[40vh] items-center justify-center">
 						<Image
-							src={data[0].provider[0].imageUrl}
-							alt={data[0].provider[0].name}
+							src={data[0].imageUrl}
+							alt={data[0].providerName}
+							
 							layout="fill"
-							objectFit="cover"
-							className=" rotate-0 rounded-sm"
+							objectFit="contain"
+							className=" rotate-0  rounded-sm"
 						/>
 					</div>
 					<div className="lg:text-sm text-xs my-4 bg-white shadow-xl rounded-md p-4">
-						{data[0].provider[0].details}
+						{data[0].providerDetails}
 					</div>
 				</div>
 			</div>
