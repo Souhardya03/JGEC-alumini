@@ -24,7 +24,7 @@ const Scholarship = () => {
 						<div className="bg-[#3fa3d5] text-lg md:text-xl text-neutral-950 p-2.5 font-medium">
 							Scholarship Programs
 						</div>
-						<div className="w-full overflow-hidden h-[calc(70vh-4rem)]">
+						<div className="w-full overflow-auto h-[calc(70vh-4rem)]">
 							<ul className="bottom-to">
 								{ScholarshipDetails.map((item, index) => (
 									<li
