@@ -10,16 +10,16 @@ const Kanchenjunga = () => {
 				normalTitle="junga"
 				description="A private land inside the college campus purchased by Alumni Association"
 			/>
-			<div className="lg:p-8 border   lg:px-[12rem]">
+			<div className="lg:p-8 border  lg:px-[12rem]">
 				<div className="border flex flex-col space-y-7 lg:space-y-14 border-gray-300 bg-white rounded-md p-4">
 					<div>
 						<div className="flex flex-col">
-							<h2 className="lg:text-4xl md:text-3xl text-3xl text-primary  font-semibold">
+							<h2 className="lg:text-4xl md:text-3xl text-2xl text-primary  font-semibold">
 								Kanchenjunga
 							</h2>
-							<div className="border-primary w-20 md:w-48 mt-2 border-[2.5px] rounded-full"></div>
+							<div className="border-primary w-20 md:w-48 mt-2 border-[2px] rounded-full"></div>
 						</div>
-						<div className="mt-6 lg:text-xl text-lg">
+						<div className="mt-6 lg:text-xl text-[16px]">
 							<div className="text-black">
 								The mystical Himalaya for thousand of years remain the center of
 								knowledge for seers and scientists. Kanchenjunga is one such
@@ -29,7 +29,7 @@ const Kanchenjunga = () => {
 						</div>
 					</div>
 					<div className="flex mt-8 flex-col">
-						<h2 className="lg:text-4xl md:text-3xl text-3xl text-primary  font-semibold">
+						<h2 className="lg:text-4xl md:text-3xl text-2xl text-primary  font-semibold">
 							Floor Plans
 						</h2>
 						<div className="border-primary w-16 md:w-24 mt-2 border-[2px] rounded-full"></div>
@@ -52,9 +52,9 @@ const Kanchenjunga = () => {
 						<h2 className="lg:text-4xl md:text-3xl text-2xl text-primary  font-semibold">
 							Purpose of Kanchenjunga
 						</h2>
-						<div className="border-primary w-48 md:w-48 mt-2 border-[2.5px] rounded-full"></div>
+						<div className="border-primary w-48 md:w-48 mt-2 border-[2px] rounded-full"></div>
 						<div className="mt-4 bg-white rounded-md flex items-center flex-col-reverse lg:flex-row justify-between gap-4">
-							<div className="lg:w-1/2 flex flex-col gap-4  lg:text-xl text-lg">
+							<div className="lg:w-1/2 flex flex-col gap-4  lg:text-xl text-[16px]">
 								<div>
 									Kanchenjunga, a Knowledge & Development center shall offer
 									Management & Technical Development programs, Seminars,
@@ -83,7 +83,7 @@ const Kanchenjunga = () => {
 								width={500}
 								className="rounded-md"
 							/>
-							<div className="lg:w-1/2 flex flex-col gap-4 pr-4 text-lg lg:text-xl">
+							<div className="lg:w-1/2 flex flex-col gap-4 pr-4 text-[16px] lg:text-xl">
 								<div>
 									Kanchenjunga shall provide challenges to the loyal exstudents
 									of JGEC to deliver lectures on their specialized subject on
@@ -102,7 +102,7 @@ const Kanchenjunga = () => {
 						<h2 className="lg:text-4xl md:text-3xl text-2xl text-primary  font-semibold">
 							Promoters of Kanchenjunga
 						</h2>
-						<div className="border-primary w-48 md:w-48 mt-2 border-[2.5px] rounded-full"></div>
+						<div className="border-primary w-48 md:w-48 mt-2 border-[2px] rounded-full"></div>
 						<div className="mt-4 flex items-center lg:flex-row flex-col justify-between gap-4">
 							<Image
 								src="/assets/kanchenjunga-pic-3.png"
@@ -121,12 +121,12 @@ const Kanchenjunga = () => {
 							/>
 						</div>
 					</div>
-					<div className="flex mt-8 flex-col">
-						<h2 className="lg:text-4xl md:text-3xl text-3xl text-primary  font-semibold">
+					<div className="flex mt-8 pb-4 flex-col">
+						<h2 className="lg:text-4xl md:text-3xl text-2xl text-primary  font-semibold">
 							Building Features
 						</h2>
 						<div className="border-primary w-48 md:w-48 mt-2 border-[2px] rounded-full"></div>
-						<div className="mt-4 pl-6 text-xl">
+						<div className="mt-4 pl-6 lg:text-[18px] text-[16px]">
 							<ul className=" list-disc space-y-2">
 								<li>One 1044 sq. ft. conference/ seminar hall.</li>
 								<li>
