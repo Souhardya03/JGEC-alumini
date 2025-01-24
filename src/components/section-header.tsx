@@ -24,7 +24,7 @@ const SectionHeader: FC<IProps> = ({ highlightTitle, normalTitle, description, i
                         <div className="text-3xl text-center lg:text-5xl text-blue-400 font-medium">
                             {highlightTitle}<span className="text-white ml-2">{normalTitle}</span>
                         </div>
-                        <div className="text-sm lg:text-lg  text-center max-w-2xl">
+                        <div className="text-xs lg:text-lg  text-center max-w-2xl">
                             {description}
                         </div>
                     </div>
