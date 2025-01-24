@@ -14,10 +14,10 @@ const Kanchenjunga = () => {
 				<div className="border flex flex-col space-y-7 lg:space-y-14 border-gray-300 bg-white rounded-md p-4">
 					<div>
 						<div className="flex flex-col">
-							<h2 className="lg:text-4xl md:text-3xl text-2xl text-primary  font-semibold">
+							<h2 className="lg:text-3xl md:text-3xl text-2xl text-primary  font-semibold">
 								Kanchenjunga
 							</h2>
-							<div className="border-primary w-20 md:w-48 mt-2 border-[2px] rounded-full"></div>
+							<div className="border-primary w-20 md:w-40 mt-2 border-[2px] rounded-full"></div>
 						</div>
 						<div className="mt-6 lg:text-xl text-[16px]">
 							<div className="text-black">
@@ -29,7 +29,7 @@ const Kanchenjunga = () => {
 						</div>
 					</div>
 					<div className="flex mt-8 flex-col">
-						<h2 className="lg:text-4xl md:text-3xl text-2xl text-primary  font-semibold">
+						<h2 className="lg:text-3xl md:text-3xl text-2xl text-primary  font-semibold">
 							Floor Plans
 						</h2>
 						<div className="border-primary w-16 md:w-24 mt-2 border-[2px] rounded-full"></div>
@@ -49,7 +49,7 @@ const Kanchenjunga = () => {
 						</div>
 					</div>
 					<div className="flex mt-8 flex-col">
-						<h2 className="lg:text-4xl md:text-3xl text-2xl text-primary  font-semibold">
+						<h2 className="lg:text-3xl md:text-3xl text-2xl text-primary  font-semibold">
 							Purpose of Kanchenjunga
 						</h2>
 						<div className="border-primary w-48 md:w-48 mt-2 border-[2px] rounded-full"></div>
@@ -99,7 +99,7 @@ const Kanchenjunga = () => {
 						</div>
 					</div>
 					<div className="flex mt-8 flex-col">
-						<h2 className="lg:text-4xl md:text-3xl text-2xl text-primary  font-semibold">
+						<h2 className="lg:text-3xl md:text-3xl text-2xl text-primary  font-semibold">
 							Promoters of Kanchenjunga
 						</h2>
 						<div className="border-primary w-48 md:w-48 mt-2 border-[2px] rounded-full"></div>
@@ -122,7 +122,7 @@ const Kanchenjunga = () => {
 						</div>
 					</div>
 					<div className="flex mt-8 pb-4 flex-col">
-						<h2 className="lg:text-4xl md:text-3xl text-2xl text-primary  font-semibold">
+						<h2 className="lg:text-3xl md:text-3xl text-2xl text-primary  font-semibold">
 							Building Features
 						</h2>
 						<div className="border-primary w-48 md:w-48 mt-2 border-[2px] rounded-full"></div>
