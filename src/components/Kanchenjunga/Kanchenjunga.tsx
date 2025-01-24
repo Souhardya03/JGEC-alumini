@@ -68,7 +68,7 @@ const Kanchenjunga = () => {
 							</div>
 
 							<Image
-								src="/assets/Kanchenjunga-pic-2.png"
+								src="/assets/kanchenjunga-pic-2.png"
 								alt=""
 								height={500}
 								width={500}
@@ -77,7 +77,7 @@ const Kanchenjunga = () => {
 						</div>
 						<div className="mt-6 bg-white rounded-md flex items-center lg:flex-row flex-col justify-between gap-4">
 							<Image
-								src="/assets/Kanchenjunga-pic-1.png"
+								src="/assets/kanchenjunga-pic-1.png"
 								alt=""
 								height={500}
 								width={500}
@@ -105,7 +105,7 @@ const Kanchenjunga = () => {
 						<div className="border-primary w-48 md:w-48 mt-2 border-[2.5px] rounded-full"></div>
 						<div className="mt-4 flex items-center lg:flex-row flex-col justify-between gap-4">
 							<Image
-								src="/assets/Kanchenjunga-pic-3.png"
+								src="/assets/kanchenjunga-pic-3.png"
 								alt=""
 								height={400}
 								width={400}
@@ -114,7 +114,7 @@ const Kanchenjunga = () => {
 								ENGINEERING GRADUATES OF JGEC FROM 1966 – 2015
 							</div>
 							<Image
-								src="/assets/Kanchenjunga-pic-4.png"
+								src="/assets/kanchenjunga-pic-4.png"
 								alt=""
 								height={400}
 								width={400}
@@ -126,7 +126,7 @@ const Kanchenjunga = () => {
 							Building Features
 						</h2>
 						<div className="border-primary w-48 md:w-48 mt-2 border-[2px] rounded-full"></div>
-						<div className="mt-4 pl-6 lg:text-xl">
+						<div className="mt-4 pl-6 text-xl">
 							<ul className=" list-disc space-y-2">
 								<li>One 1044 sq. ft. conference/ seminar hall.</li>
 								<li>
