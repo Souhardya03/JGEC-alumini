@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-import { Pagination, Navigation, Autoplay } from "swiper/modules"; 
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Image from "next/image";
@@ -22,19 +22,19 @@ const Home: React.FC = () => {
 							disableOnInteraction: true,
 						}}
 						modules={[Pagination, Autoplay]}
-						className="mySwiper"
-					>
-						{[0, 1, 2].map(ele => (
+						className="mySwiper">
+						{[0, 1, 2].map((ele) => (
 							<SwiperSlide key={ele}>
 								<div className="h-full relative w-full">
 									<div className="absolute z-20 rotate-0 h-full  flex flex-col gap-4 lg:gap-10 justify-center max-w-xs xs:max-w-sm sm:max-w-xl  w-full left-[1em]  lg:left-[13.5em]">
 										<div className="text-yellow-400 text-left font-medium lg:text-3xl sm:text-xl text-base">
-											<h1 className="text-wrap break-words">The Jalpaiguri Government Engineering College Alumini
+											<h1 className="text-wrap break-words">
+												The Jalpaiguri Government Engineering College Alumini
 												Association, Jalpaiguri
 											</h1>
 										</div>
 										<div className="flex gap-8">
-											<Link href="/vision-mission" >
+											<Link href="/vision-mission">
 												<Button className="lg:text-base text-white lg:p-3 lg:px-5  p-2">
 													Our Mission
 												</Button>
@@ -74,12 +74,12 @@ const Home: React.FC = () => {
 								// navigation={true}
 								modules={[Navigation]}
 								className="mySwiper">
-								{[0, 1, 2].map(ele => (
+								{[0, 1, 2].map((ele) => (
 									<SwiperSlide key={ele}>
 										<div className="w-full h-full flex flex-col lg:flex-row gap-6 pb-4 pr-4 ">
 											<div className="h-auto sm:h-60 w-full lg:w-1/2 lg:h-full">
 												<Image
-													src="https://jgecalum.org/public/site/images/scholarship/1711114478bibhas_bhowmik.jpg"
+													src="/uploads/scholarship/Bibhas-Bhowmik-1737607751252-WhatsApp Image 2025-01-23 at 08.jpg"
 													alt="slide-1"
 													width={150}
 													height={150}
@@ -116,7 +116,7 @@ const Home: React.FC = () => {
 const SwiperButtons = () => {
 	const swiper = useSwiper();
 	return (
-		<div className="flex  justify-end items-center gap-2 sm:absolute bottom-0 right-4 sm:right-0 z-50 pe-4" >
+		<div className="flex  justify-end items-center gap-2 sm:absolute bottom-0 right-4 sm:right-0 z-50 pe-4">
 			<button
 				onClick={() => swiper.slidePrev()}
 				className="bg-[#5580ff] hover:bg-blue-600 transition-colors ease-linear duration-300 text-white p-3 text-lg rounded-full">
